@@ -14,10 +14,12 @@
     "gulp-concat": "^2.6.0",
     "gulp-email-builder": "^3.0.0",
     "gulp-image": "^2.6.0",
+    "gulp-inline-css": "^3.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-pug": "^3.0.4",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
-    "merge-stream": "^1.0.0"
+    "merge-stream": "^1.0.0",
+    "nodemailer": "^2.6.0"
   }
 }

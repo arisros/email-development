@@ -1,15 +1,23 @@
 doctype html
 html(lang="en")
 	head
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
 		title Template Email Notifications
-		
+		link(rel="stylesheet", href="style.css")
 	body
-		table(width='100%')
-			tbody(width='400')
-				tr
-					td logo
-					td
-						tbody
-							tr f
-							tr t
-							tr l
+		table(width="100%", align="center")
+			tr
+				td(width="100%", border=0,)
+					//- Start header
+					table.wrapper(max-width="500",border="0",bgcolor="#333333" align="center")
+						tr
+							td(width="100%" )
+								//- Logo
+								table
+									tr
+										td(width="100%", align="center" )
+											img(src="http://pasmandor.com/img/cs/email-icn.png")
+									tr
+										td(style="color: #ffffff; text-align:center")
+											h1 Hello Friends, This Notifications
+							

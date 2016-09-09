@@ -2,43 +2,42 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var replace = require('gulp-replace');
+var inlineCss = require('gulp-inline-css');
 
 var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 var mergeStream = require('merge-stream');
 var concat = require('gulp-concat');
 
 var emailBuilder = require('gulp-email-builder');
 var options = { encodeSpecialChars: true };
+var buildEmail = new emailBuilder({ encodeSpecialChars: true});
 
 // Current Date
 var current_date = new Date().toString();
 var email_subject = 'Notification Eproc';
 var remote_imgs_basepath = 'http://pasmandor.com/img/cs/';
-var email_builder_options = {
-	encodeSpecialChars: true,
-	emailTest : {
-		// Email Test
-		email : 'arisjiratkurniawan@gmail.com,' + 'arisjirat88@yahoo.com,' + 'arisjirat@icloud.com,' + 'arisjirat@hotmail.com',
-		
-		// Email Subject
-		subject: email_subject + ' [' + current_date + ']',
 
-		// Opt
-	},
-
-};
-
-var reload = browserSync.reload;
-
+// Pug Task Compile HTML to shelter folder
 gulp.task('pug', function () {
 	var pugCompile = gulp.src('src/**/*.pug')
 		.pipe(pug({
 			pretty: true
 		}))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('shelter'));
 
 	return pugCompile;
 });
+
+// Sass Task
+gulp.task('sass', function () {
+	var sassCompile = gulp.src('src/**/*.scss')
+		.pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+		.pipe(gulp.dest('shelter'));
+	return sassCompile;
+});
+
+gulp.task('sass-watch', ['sass'], reload);
 
 gulp.task('pug-watch', ['pug'], function () {
 	browserSync.reload();
@@ -50,21 +49,22 @@ gulp.task('html-watch', function () {
             console.log('== Restarted! ==');
 });
 
-gulp.task('development', ['pug'], function () {
+gulp.task('development', ['pug', 'sass'], function () {
 	browserSync({
 		injectChanges: true,
-		files: 'dist/notifications/template.html',
+		files: 'shelter/notifications/template.html',
 		server: {
-			baseDir: './dist/notifications/',
+			baseDir: './shelter/notifications/',
 			index: 'template.html'
 		},
 	});
 	gulp.watch('src/**/*.pug', ['pug-watch']);
-	gulp.watch('dist/**/*.html', ['html-watch']);
+	gulp.watch('src/**/*.scss', ['sass-watch']);
+	gulp.watch('shelter/**/*.html', ['html-watch']);
 });
 
-gulp.task('emailBuilder', function () {
-	return gulp.src(['./src/*.html'])
-		.pipe(emailBuilder(options).build())
-		.pipe(gulp.dest('dist/'));
+gulp.task('inline-css', function () {
+	return gulp.src('shelter/**/*.html')
+		.pipe(inlineCss())
+		.pipe(gulp.dest('ready-to-fly/'));
 });
