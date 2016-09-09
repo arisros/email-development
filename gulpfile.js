@@ -21,16 +21,16 @@ var smptInfo = {
 };
 
 // Gulp-email wait approval from mailgun account
-var sendEmail = require('gulp-email');
-var options = {
-        user: 'api:key-7bb35e5c051d738163e69000c49bc18a',
-        url: 'https://api.mailgun.net/v3/sandbox25f420ce8ecf41878e7b9836d3c0ec9e.mailgun.org/messages',
-        form: {
-            from: 'John Doe <John.Doe@gmail.com>',
-            to: 'Fulano Mengano <arisjiratkurniawan@gmail.com>',
-            subject: 'The last dist',
-        }
-    };
+// var sendEmail = require('gulp-email');
+// var options = {
+//         user: 'api:key-7bb35e5c051d738163e69000c49bc18a',
+//         url: 'https://api.mailgun.net/v3/sandbox25f420ce8ecf41878e7b9836d3c0ec9e.mailgun.org/messages',
+//         form: {
+//             from: 'John Doe <John.Doe@gmail.com>',
+//             to: 'Fulano Mengano <arisjiratkurniawan@gmail.com>',
+//             subject: 'The last dist',
+//         }
+//     };
 
 // 
 // 
@@ -58,7 +58,7 @@ gulp.task('pug', function () {
 // Sass Task
 gulp.task('sass', function () {
 	var sassCompile = gulp.src('src/**/*.scss')
-		.pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+		.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
 		.pipe(gulp.dest('shelter'));
 	return sassCompile;
 });
@@ -106,7 +106,12 @@ gulp.task('mail', function () {
 		.pipe(mail({
 			subject: 'Halo',
 			to: [
-				'arisjiratkurniawan@gmail.com'
+				'arisjiratkurniawan@gmail.com',
+				'aris@docotel.co.id',
+				'arisjirat@icloud.com'
+			],
+			cc: [
+				'arisjirat88@yahoo.com'
 			],
 			from: 'Foo <arisjiratkurniawan@gmail.com>',
 			smtp: smptInfo
