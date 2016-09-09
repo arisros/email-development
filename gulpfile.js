@@ -9,9 +9,35 @@ var reload = browserSync.reload;
 var mergeStream = require('merge-stream');
 var concat = require('gulp-concat');
 
-var emailBuilder = require('gulp-email-builder');
-var options = { encodeSpecialChars: true };
-var buildEmail = new emailBuilder({ encodeSpecialChars: true});
+var mail = require('gulp-mail');
+var smptInfo = {
+	auth: { 
+		user: 'arisjiratkurniawan@gmail.com',
+		pass : 'F7f%4#@F7f%4#@'
+	},
+	host: 'smtp.gmail.com',
+	secureConnection: true,
+	port: 465
+};
+
+// Gulp-email wait approval from mailgun account
+var sendEmail = require('gulp-email');
+var options = {
+        user: 'api:key-7bb35e5c051d738163e69000c49bc18a',
+        url: 'https://api.mailgun.net/v3/sandbox25f420ce8ecf41878e7b9836d3c0ec9e.mailgun.org/messages',
+        form: {
+            from: 'John Doe <John.Doe@gmail.com>',
+            to: 'Fulano Mengano <arisjiratkurniawan@gmail.com>',
+            subject: 'The last dist',
+        }
+    };
+
+// 
+// 
+// Doesn't Work yet!
+// var emailBuilder = require('gulp-email-builder');
+// var options = { encodeSpecialChars: true };
+// var buildEmail = new emailBuilder({ encodeSpecialChars: true});
 
 // Current Date
 var current_date = new Date().toString();
@@ -68,3 +94,23 @@ gulp.task('inline-css', function () {
 		.pipe(inlineCss())
 		.pipe(gulp.dest('ready-to-fly/'));
 });
+
+// Gulp-email wait approval from mailgun account
+gulp.task('send', function () {
+	return gulp.src('ready-to-fly/notifications/*.html')
+		.pipe(sendEmail(options));
+});
+
+gulp.task('mail', function () {
+	return gulp.src('./ready-to-fly/notifications/template.html')
+		.pipe(mail({
+			subject: 'Halo',
+			to: [
+				'arisjiratkurniawan@gmail.com'
+			],
+			from: 'Foo <arisjiratkurniawan@gmail.com>',
+			smtp: smptInfo
+		}));
+});
+
+
