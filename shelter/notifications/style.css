@@ -2,38 +2,6 @@
 		COLOR 
 ------------------------------------- */
 /* ------------------------------------- 
-		GLOBAL 
-------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-table.init {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-}
-
-table.colp, td.colp, tr.colp {
-  border-collapse: collapse;
-}
-
-img {
-  max-width: 100%;
-}
-
-.collapse {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  width: 100% !important;
-  height: 100%;
-}
-
-/* ------------------------------------- 
 		CUSTOM 
 ------------------------------------- */
 .primary {
@@ -103,50 +71,37 @@ td.ep-logo img {
   margin: 20px;
 }
 
-.column-3 {
-  color: #4770A0;
-  background: #EAEFF4;
-  padding: 15px 10px !important;
-  border-collapse: none !important;
-  height: 50px;
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+table.init {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
-.column-3 td.col {
-  width: 30%;
+table.colp, td.colp, tr.colp {
+  border-collapse: collapse;
 }
 
-.column-2 {
-  font-size: 15px;
+img {
+  max-width: 100%;
 }
 
-.col-3 {
-  float: left;
-  width: 30%;
+.collapse {
+  margin: 0;
+  padding: 0;
 }
 
-.col-3 .value {
-  width: 10%;
-}
-
-.col-10 {
-  float: left;
-  width: 80%;
-}
-
-.col-2 {
-  float: left;
-  width: 20%;
-}
-
-.keywords {
-  font-size: 20px;
-  line-height: 30px;
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  width: 100% !important;
+  height: 100%;
 }
 
 /* ------------------------------------- 
 		JOB LIST 
 ------------------------------------- */
-.wrapper-list {
+.wrapper-body {
   padding: 20px;
   border-bottom: 1px solid #e8e8e8;
 }

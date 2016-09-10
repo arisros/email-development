@@ -3,278 +3,320 @@ doctype html
 html(lang="en")
 	head
 		meta(name="viewport", content="width=device-width")
-
 		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
 		title Template Email Notifications
 		link(rel="stylesheet", href="style.css")
 	body
-		//- TRY Hide Something
+		// START WRAPPER
+		div.wrapper
+			// START HEADER LOGO AND SOCIAL BUTTON
+			table.head-wrap
+				tr
+					td
+					// START CONTAINER
+					td.header.container(algin="")
+						// START CONTENT
+						div.content
+							table
+								tr
+									td.ep-logo
+										img(src="http://pasmandor.com/img/cs/Paypal.png", alt="logo")
+									// START Icon Media Social
+									td.soc-header(align="right")
+										table
+											tr
+												td
+													a(href="")
+														img(src="http://pasmandor.com/img/cs/soc-med-icn-03.png", alt="icon-facebook")
+												td 
+													a(href="")
+														img(src="http://pasmandor.com/img/cs/soc-med-icn-04.png", alt="icon-facebook") 
+												td 
+													a(href="")
+														img(src="http://pasmandor.com/img/cs/soc-med-icn-05.png", alt="icon-facebook")
+									// END Icon Media Social
+						// END CONTENT
+					// END CONTAINER
+			// END HEADER LOGO AND SOCIAL BUTTON
+
+			// START BODY
+			table.body-wrap
+
+			// END BODY
+
+			// START FOOTER
+			table.footer-wrap
+			// END FOOTER
+
+		// END WRAPPER
+
+
+		//- //- TRY Hide Something
 		
 
-		//- START Header
-		table.head-wrap.font-init
-			tr
-				td
-				td.header.container(algin="")
-					div.content
-						div(class="mobilecontent" style="display:none;max-height:0px;overflow:hidden;") Mobile Content
-						table
-							tr
-								td.ep-logo
-									img(src="http://pasmandor.com/img/cs/Paypal.png", alt="logo")
-								td.soc-header(align="right")
-									table
-										tr
-											td
-												a(href="")
-													img(src="http://pasmandor.com/img/cs/soc-med-icn-03.png", alt="icon-facebook")
-											td 
-												a(href="")
-													img(src="http://pasmandor.com/img/cs/soc-med-icn-04.png", alt="icon-facebook") 
-											td 
-												a(href="")
-													img(src="http://pasmandor.com/img/cs/soc-med-icn-05.png", alt="icon-facebook")
-		//- END Header
+		//- //- START Header
+		//- table.head-wrap.font-init
+		//- 	tr
+		//- 		td
+		//- 		td.header.container(algin="")
+		//- 			div.content
+		//- 				table
+		//- 					tr
+		//- 						td.ep-logo
+		//- 							img(src="http://pasmandor.com/img/cs/Paypal.png", alt="logo")
+		//- 						td.soc-header(align="right")
+		//- 							table
+		//- 								tr
+		//- 									td
+		//- 										a(href="")
+		//- 											img(src="http://pasmandor.com/img/cs/soc-med-icn-03.png", alt="icon-facebook")
+		//- 									td 
+		//- 										a(href="")
+		//- 											img(src="http://pasmandor.com/img/cs/soc-med-icn-04.png", alt="icon-facebook") 
+		//- 									td 
+		//- 										a(href="")
+		//- 											img(src="http://pasmandor.com/img/cs/soc-med-icn-05.png", alt="icon-facebook")
+		//- //- END Header
 
-		//- START Body Content
-		table.body-wrap.init
-			tr
-				td
-				td.container.ep-container.colp
-					div.content.colp
-						table.colp
-							//- START Title
-							tr
-								td.ep-header
-									img(src="http://pasmandor.com/img/cs/email-icn.png", alt="icon", align="center")
-									h1 Hi Idam, Anda Mempunyai Notifikasi Baru
-									a.btn Lihat Semua
-							//- END
+		//- //- START Body Content
+		//- table.body-wrap.init
+		//- 	tr
+		//- 		td
+		//- 		td.container.ep-container.colp
+		//- 			div.content.colp
+		//- 				table.colp
+		//- 					//- START Title
+		//- 					tr
+		//- 						td.ep-header
+		//- 							img(src="http://pasmandor.com/img/cs/email-icn.png", alt="icon", align="center")
+		//- 							h1 Hi Idam, Anda Mempunyai Notifikasi Baru
+		//- 							a.btn Lihat Semua
+		//- 					//- END
 							
-							//- START Divider Counter
-							tr
-								td
-									table.column-3
-										tr
-											td
-												div.col-3.keywords
-													table
-														tr
-															td 
-																table
-																	tr
-																		td KEYWORDS (8)
-												div.col-3
-													table
-														tr
-															td
-																table
-																	tr
-																		td.value
-																			div.circle.bg-orange 14
-																		td New Tenders
-												div.col-3
-													table
-														tr
-															td
-																table
-																	tr
-																		td.value
-																			div.circle.bg-green 23
-																		td You can Bid
-							//- END Divider Counter
-							tr
-								td
-									table
-										tr
-											td 
-												//- START List 1
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-purple PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 					//- START Divider Counter
+		//- 					tr
+		//- 						td
+		//- 							table.column-3
+		//- 								tr
+		//- 									td
+		//- 										div.col-3.keywords
+		//- 											table
+		//- 												tr
+		//- 													td 
+		//- 														table
+		//- 															tr
+		//- 																td KEYWORDS (8)
+		//- 										div.col-3
+		//- 											table
+		//- 												tr
+		//- 													td
+		//- 														table
+		//- 															tr
+		//- 																td.value
+		//- 																	div.circle.bg-orange 14
+		//- 																td New Tenders
+		//- 										div.col-3
+		//- 											table
+		//- 												tr
+		//- 													td
+		//- 														table
+		//- 															tr
+		//- 																td.value
+		//- 																	div.circle.bg-green 23
+		//- 																td You can Bid
+		//- 					//- END Divider Counter
+		//- 					tr
+		//- 						td
+		//- 							table
+		//- 								tr
+		//- 									td 
+		//- 										//- START List 1
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-purple PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
 
-												//- START List 2
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-purple PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 										//- START List 2
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-purple PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
 
-												//- START List 3
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-green PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 										//- START List 3
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-green PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
-							//- START Divider Counter
-							tr
-								td
-									table.column-3
-										tr
-											td
-												div.col-3.keywords
-													table
-														tr
-															td 
-																table
-																	tr
-																		td KEYWORDS (8)
-												div.col-3
-													table
-														tr
-															td
-																table
-																	tr
-																		td.value
-																			div.circle.bg-orange 14
-																		td New Tenders
-												div.col-3
-													table
-														tr
-															td
-																table
-																	tr
-																		td.value
-																			div.circle.bg-green 23
-																		td You can Bid
-							//- END Divider Counter
-							tr
-								td
-									table
-										tr
-											td 
-												//- START List 1
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-purple PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
+		//- 					//- START Divider Counter
+		//- 					tr
+		//- 						td
+		//- 							table.column-3
+		//- 								tr
+		//- 									td
+		//- 										div.col-3.keywords
+		//- 											table
+		//- 												tr
+		//- 													td 
+		//- 														table
+		//- 															tr
+		//- 																td KEYWORDS (8)
+		//- 										div.col-3
+		//- 											table
+		//- 												tr
+		//- 													td
+		//- 														table
+		//- 															tr
+		//- 																td.value
+		//- 																	div.circle.bg-orange 14
+		//- 																td New Tenders
+		//- 										div.col-3
+		//- 											table
+		//- 												tr
+		//- 													td
+		//- 														table
+		//- 															tr
+		//- 																td.value
+		//- 																	div.circle.bg-green 23
+		//- 																td You can Bid
+		//- 					//- END Divider Counter
+		//- 					tr
+		//- 						td
+		//- 							table
+		//- 								tr
+		//- 									td 
+		//- 										//- START List 1
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-purple PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
 
-												//- START List 2
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-purple PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 										//- START List 2
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-purple PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
 
-												//- START List 3
-												table.column-2.wrapper-list
-													tr
-														td
-															div.col-10
-																table
-																	tr
-																		td.tag
-																			div.circle.bg-green PP
-																		td
-																			table
-																				tr
-																					td.job-title Pekerjaan Perencanaan Perluasan Gedung
-																				tr
-																					td
-																						table
-																							tr
-																								td.new-tenders 3 New Tenders
-																								td.tenders-you-can 6 Tenders You Can Bid
+		//- 										//- START List 3
+		//- 										table.column-2.wrapper-list
+		//- 											tr
+		//- 												td
+		//- 													div.col-10
+		//- 														table
+		//- 															tr
+		//- 																td.tag
+		//- 																	div.circle.bg-green PP
+		//- 																td
+		//- 																	table
+		//- 																		tr
+		//- 																			td.job-title Pekerjaan Perencanaan Perluasan Gedung
+		//- 																		tr
+		//- 																			td
+		//- 																				table
+		//- 																					tr
+		//- 																						td.new-tenders 3 New Tenders
+		//- 																						td.tenders-you-can 6 Tenders You Can Bid
 
-															div.col-2.right-align
-																a.small-btn View
-															div.clear
-												//- END List 
-										tr
-											td asasa
+		//- 													div.col-2.right-align
+		//- 														a.small-btn View
+		//- 													div.clear
+		//- 										//- END List 
+		//- 								tr
+		//- 									td asasa
 
 
 

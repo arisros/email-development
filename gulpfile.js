@@ -70,12 +70,21 @@ gulp.task('pug-watch', ['pug'], function () {
             console.log('== Restarted! ==');
 });
 
-gulp.task('html-watch', function () {
+gulp.task('inline-css', function () {
+	return gulp.src('shelter/**/*.html')
+		.pipe(inlineCss())
+		.pipe(gulp.dest('ready-to-fly/'));
+});
+
+gulp.task('cssinline-watch', ['inline-css'],function () {
 	browserSync.reload();
             console.log('== Restarted! ==');
 });
 
-gulp.task('development', ['pug', 'sass'], function () {
+
+
+
+gulp.task('development', ['pug', 'sass', 'cssinline-watch'], function () {
 	browserSync({
 		injectChanges: true,
 		files: 'shelter/notifications/template.html',
@@ -84,16 +93,11 @@ gulp.task('development', ['pug', 'sass'], function () {
 			index: 'template.html'
 		},
 	});
-	gulp.watch('src/**/*.pug', ['pug-watch']);
+	gulp.watch('src/**/*.pug', ['pug-watch, ']);
 	gulp.watch('src/**/*.scss', ['sass-watch']);
 	gulp.watch('shelter/**/*.html', ['html-watch']);
 });
 
-gulp.task('inline-css', function () {
-	return gulp.src('shelter/**/*.html')
-		.pipe(inlineCss())
-		.pipe(gulp.dest('ready-to-fly/'));
-});
 
 // Gulp-email wait approval from mailgun account
 gulp.task('send', function () {
