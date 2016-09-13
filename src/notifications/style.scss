@@ -4,6 +4,7 @@
 		PALLETE 
 ------------------------------------- */
 $primary: #4770A0;
+$grey: #CCCCCC;
 $greySoft: #e8e8e8;
 $greyVerySoft: #d6d6d6;
 $divider: #EAEFF4;
@@ -161,7 +162,7 @@ span.circle {
 	height:40px; line-height:40px; font-size:13px;
 }
 .link {
-	font-size: 16px;
+	font-size: 15px;
 	color: $primary;
 }
 .max-keyword {
@@ -281,6 +282,11 @@ body {
 	text-align: left;
 	font-size: 14px;
 	color: $primary;
+}
+.job-descriptions {
+	text-align: left;
+	font-size: 13px;
+	color: $grey;
 }
 .new-tenders {
 	color: $orange;
