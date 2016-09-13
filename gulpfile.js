@@ -70,21 +70,20 @@ gulp.task('pug-watch', ['pug'], function () {
             console.log('== Restarted! ==');
 });
 
+gulp.task('html-watch', function () {
+	browserSync.reload();
+            console.log('== Restarted! ==');
+});
+
 gulp.task('inline-css', function () {
 	return gulp.src('shelter/**/*.html')
 		.pipe(inlineCss())
 		.pipe(gulp.dest('ready-to-fly/'));
 });
 
-gulp.task('cssinline-watch', ['inline-css'],function () {
-	browserSync.reload();
-            console.log('== Restarted! ==');
-});
 
 
-
-
-gulp.task('development', ['pug', 'sass', 'cssinline-watch'], function () {
+gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 	browserSync({
 		injectChanges: true,
 		files: 'shelter/notifications/template.html',
@@ -93,7 +92,7 @@ gulp.task('development', ['pug', 'sass', 'cssinline-watch'], function () {
 			index: 'template.html'
 		},
 	});
-	gulp.watch('src/**/*.pug', ['pug-watch, ']);
+	gulp.watch('src/**/*.pug', ['pug-watch']);
 	gulp.watch('src/**/*.scss', ['sass-watch']);
 	gulp.watch('shelter/**/*.html', ['html-watch']);
 });
@@ -110,9 +109,10 @@ gulp.task('mail', function () {
 		.pipe(mail({
 			subject: 'Halo',
 			to: [
-				'arisjiratkurniawan@gmail.com',
-				'aris@docotel.co.id',
-				'arisjirat@icloud.com'
+				'arisjiratkurniawan@gmail.com'
+				// 'arisjirat88@yahoo.com',
+				// 'aris@docotel.co.id',
+				// 'arisjirat@icloud.com'
 			],
 			cc: [
 				'arisjirat88@yahoo.com'

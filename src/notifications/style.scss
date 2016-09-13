@@ -1,7 +1,7 @@
 
 
 /* ------------------------------------- 
-		COLOR 
+		PALLETE 
 ------------------------------------- */
 $primary: #4770A0;
 $greySoft: #e8e8e8;
@@ -14,8 +14,52 @@ $blueSoft:#8FC6DB;
 $brown:#D6C990;
 $white: #FFFFFF;
 
+
+
 /* ------------------------------------- 
-		CUSTOM 
+		RESETER 
+------------------------------------- */
+
+body, ul,li,td,th,tr,table,h1,h2,h3,h4,h5, small, div,p { 
+	margin:0;
+	padding:0;
+}
+table {
+	mso-table-lspace: 0; mso-table-rspace: 0; width: 100%;
+}
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+a { color: #2BA6CB;}
+
+.btn {
+	text-decoration:none;
+	color: #FFF;
+	background-color: #666;
+	padding:10px 16px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+
+/* ------------------------------------- 
+		INIT 
 ------------------------------------- */
 .primary {
 	background: $primary;
@@ -44,17 +88,30 @@ $white: #FFFFFF;
 .circle {
 	width:30px;
 	height: 30px;
+	max-height: 30px;
 	border-radius: 30px;
 	line-height: 30px;
 	text-align: center;
 	color: $white;
 }
-td.ep-logo {
-	max-width: 140px;
-	img {
-	max-width: 140px;
-	padding:10px;
-	}
+span.circle {
+	padding:5px;
+}
+.ep-margin-ud-10 {
+	height:10px; line-height:10px; font-size:13px;
+}
+.ep-margin-ud-20 {
+	height:20px; line-height:20px; font-size:13px;
+}
+.ep-margin-ud-30 {
+	height:30px; line-height:30px; font-size:13px;
+}
+.ep-margin-ud-40 {
+	height:40px; line-height:40px; font-size:13px;
+}
+
+.max-keyword {
+	max-width: 130px;
 }
 .ep-container {
 	border:1px $greySoft solid;
@@ -62,26 +119,79 @@ td.ep-logo {
 .ep-header {
 	text-align: center;
 	color: $primary;
-	padding:20px;
-	h1 {
-		color: $primary;
-		font-size: 20px;
-		font-weight: 500;
-		margin:20px;
+}
+h1.title-notify {
+	color: $primary;
+	font-size: 22px;
+	font-weight: 500;
+}
+.left-text {
+	text-align: left;
+}
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%; color: $primary}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+.ep-logo {
+	max-width: 140px;
+	img {
+	max-width: 140px;
+	padding:10px;
 	}
 }
+.media-social-icon{
+	max-width: 20px!important;
+	text-align: center;
+	margin:0;
+	padding: 0;
+	border-collapse: collapse;
+}
+
+/* ------------------------------------- 
+		DIVIDER 
+------------------------------------- */
+
+.divider-counter {
+	color: $primary;
+	background: $divider;
+	.div-col {
+		text-align: center;
+		width: 150px;
+	}
+}
+.value-text{
+	text-align: left;
+	min-width: 35px;
+}
+.value-text-more{
+	text-align: left;
+	min-width: 55px;
+}
+
+
+.center {
+	text-align: center;
+}
+.col-3 {
+	min-width: 177px;
+	text-align: center;
+}
+
 /* ------------------------------------- 
 		GLOBAL 
 ------------------------------------- */
-// * { 
-// 	margin:0;
-// 	padding:0;
-// }
-table.init { 
+
+.init { 
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
 }
 table.colp,td.colp,tr.colp {
 	border-collapse:collapse;
+
 }
 img { 
 	max-width: 100%; 
@@ -97,21 +207,23 @@ body {
 	height: 100%;
 }
 
-
 /* ------------------------------------- 
-		JOB LIST 
+		TENDER LIST 
 ------------------------------------- */
 .wrapper-body {
 	padding:20px;
 	border-bottom: 1px solid $greySoft;
 }
 .job-title {
-	padding: 10px 0 0px 0;
+	text-align: left;
+	font-size: 14px;
 	color: $primary;
 }
 .new-tenders {
 	color: $orange;
 	font-size: 14px;
+	max-width: 170px;
+	min-width: 100px;
 }
 .tenders-you-can {
 	color: $green;
@@ -122,192 +234,10 @@ a.small-button {
 }
 .right-align{
 	text-align: right;
-	margin-top: 20px;
 }
-// .column-3{
-// 	color: $primary;
-// 	background: $divider;
-// 	padding:15px 10px!important;
-// 	border-collapse:none!important;
-// 	height: 50px;
-// 	td.col {
-// 		width:30%;
-// 	}
-
-// }
-// .column-2 {
-// 	font-size: 15px;
-// }
-// .col-3 {
-// 	float:left;
-// 	width: 30%; 
-// 	.value {
-// 		width:10%;
-// 	}
-// }
-// .col-10 {
-// 	float: left;
-// 	width: 80%;
-// }
-// .col-2 {
-// 	float: left;
-// 	width: 20%;
-// }
-// .keywords {
-// 	font-size: 20px;
-// 	line-height: 30px;
-// }
-
-/* ------------------------------------- 
-		ELEMENTS 
-------------------------------------- */
-a { color: #2BA6CB;}
-
-.btn {
-	text-decoration:none;
-	color: #FFF;
-	background-color: $primary;
-	padding:10px 16px;
-	font-weight:bold;
-	margin-right:10px;
-	text-align:center;
-	cursor:pointer;
-	display: inline-block;
-	border-radius: 2px;
+.border-bottom {
+	border-bottom: 1px solid $greySoft;
 }
-.small-btn {
-	text-decoration:none;
-	color: #FFF;
-	background-color: $primary;
-	padding:5px 30px;
-	font-weight:normal;
-	margin-right:10px;
-	text-align:center;
-	cursor:pointer;
-	display: inline-block;
-	border-radius: 2px;
-}
-p.callout {
-	padding:15px;
-	background-color:#ECF8FF;
-	margin-bottom: 15px;
-}
-.callout a {
-	font-weight:bold;
-	color: #2BA6CB;
-}
-
-table.social {
-/* 	padding:15px; */
-	background-color: #ebebeb;
-	
-}
-.social .soc-btn {
-	padding: 3px 7px;
-	font-size:12px;
-	margin-bottom:10px;
-	text-decoration:none;
-	color: #FFF;font-weight:bold;
-	display:block;
-	text-align:center;
-}
-a.fb { background-color: #3B5998!important; }
-a.tw { background-color: #1daced!important; }
-a.gp { background-color: #DB4A39!important; }
-a.ms { background-color: #000!important; }
-
-.sidebar .soc-btn { 
-	display:block;
-	width:100%;
-}
-
-/* ------------------------------------- 
-		HEADER 
-------------------------------------- */
-table.head-wrap { width: 100%; color: $primary}
-
-.header.container table td.logo { padding: 15px; }
-.header.container table td.label { padding: 15px; padding-left:0px;}
-
-
-/* ------------------------------------- 
-		BODY 
-------------------------------------- */
-table.body-wrap { 
-	width: 100%;
-}
-
-
-/* ------------------------------------- 
-		FOOTER 
-------------------------------------- */
-table.footer-wrap { width: 100%;	clear:both!important;
-}
-.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
-.footer-wrap .container td.content p {
-	font-size:10px;
-	font-weight: bold;
-	
-}
-
-
-/* ------------------------------------- 
-		TYPOGRAPHY 
-------------------------------------- */
-h1,h2,h3,h4,h5,h6 {
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
-}
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
-
-h1 { font-weight:200; font-size: 44px;}
-h2 { font-weight:200; font-size: 37px;}
-h3 { font-weight:500; font-size: 27px;}
-h4 { font-weight:500; font-size: 23px;}
-h5 { font-weight:900; font-size: 17px;}
-h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
-
-.collapse { margin:0!important;}
-
-p, ul { 
-	margin-bottom: 10px; 
-	font-weight: normal; 
-	font-size:14px; 
-	line-height:1.6;
-}
-p.lead { font-size:17px; }
-p.last { margin-bottom:0px;}
-
-ul li {
-	margin-left:5px;
-	list-style-position: inside;
-}
-
-/* ------------------------------------- 
-		SIDEBAR 
-------------------------------------- */
-ul.sidebar {
-	background:#ebebeb;
-	display:block;
-	list-style-type: none;
-}
-ul.sidebar li { display: block; margin:0;}
-ul.sidebar li a {
-	text-decoration:none;
-	color: #666;
-	padding:10px 16px;
-/* 	font-weight:bold; */
-	margin-right:10px;
-/* 	text-align:center; */
-	cursor:pointer;
-	border-bottom: 1px solid #777777;
-	border-top: 1px solid #FFFFFF;
-	display:block;
-	margin:0;
-}
-ul.sidebar li a.last { border-bottom-width:0px;}
-ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
-
-
 
 /* --------------------------------------------------- 
 		RESPONSIVENESS
@@ -406,5 +336,167 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
     max-height: none !important;
   }
 }
+.column-3{
+	color: $primary;
+	background: $divider;
+	padding:15px 10px!important;
+	border-collapse:none!important;
+	height: 50px;
+	td.col {
+		width:30%;
+	}
+
+}
+.column-2 {
+	font-size: 15px;
+}
+.col-3 {
+	float:left;
+	width: 30%; 
+	.value {
+		width:10%;
+	}
+}
+.col-10 {
+	float: left;
+	width: 80%;
+}
+.col-2 {
+	float: left;
+	width: 20%;
+}
+.keywords {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { color: #2BA6CB;}
+
+.btn {
+	text-decoration:none;
+	color: #FFF;
+	background-color: $primary;
+	padding:10px 16px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+	border-radius: 2px;
+}
+.small-btn {
+	text-decoration:none;
+	color: #FFF;
+	background-color: $primary;
+	padding:5px 30px;
+	font-weight:normal;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+	border-radius: 2px;
+}
+p.callout {
+	padding:15px;
+	background-color:#ECF8FF;
+	margin-bottom: 15px;
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+table.social {
+/* 	padding:15px; */
+	background-color: #ebebeb;
+	
+}
+.social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;font-weight:bold;
+	display:block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+
+.sidebar .soc-btn { 
+	display:block;
+	width:100%;
+}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { 
+	width: 100%;
+}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+ul.sidebar {
+	background:#ebebeb;
+	display:block;
+	list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+	text-decoration:none;
+	color: #666;
+	padding:10px 16px;
+/* 	font-weight:bold; */
+	margin-right:10px;
+/* 	text-align:center; */
+	cursor:pointer;
+	border-bottom: 1px solid #777777;
+	border-top: 1px solid #FFFFFF;
+	display:block;
+	margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
 
 
