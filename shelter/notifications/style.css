@@ -83,6 +83,23 @@ a {
 /* ------------------------------------- 
 		INIT 
 ------------------------------------- */
+.layout-two-column {
+  text-align: left;
+  font-size: 0;
+}
+
+.layout-two-column .layout-column {
+  min-width: 180px;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.layout-two-column .content {
+  font-size: 14px;
+  text-align: left;
+}
+
 .primary {
   background: #4770A0;
 }
@@ -127,6 +144,12 @@ a {
 
 span.circle {
   padding: 5px;
+}
+
+.ep-margin-ud-5 {
+  height: 5px;
+  line-height: 5px;
+  font-size: 5px;
 }
 
 .ep-margin-ud-10 {
