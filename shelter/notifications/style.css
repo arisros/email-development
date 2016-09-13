@@ -102,7 +102,6 @@ a {
 .layout-two-column-center {
   text-align: center !important;
   font-size: 0;
-  border: 1px solid #4770A0;
 }
 
 .layout-two-column-center .layout-column-20 {
@@ -110,7 +109,6 @@ a {
   max-width: 150px;
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #4770A0;
 }
 
 .layout-two-column-center .layout-column-80 {
@@ -118,7 +116,6 @@ a {
   max-width: 350px;
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #4770A0;
   text-align: center !important;
 }
 
@@ -126,7 +123,6 @@ a {
   font-size: 14px;
   text-align: center;
   width: 100%;
-  background: red;
 }
 
 .increase-font {
@@ -145,10 +141,19 @@ a {
   vertical-align: top;
 }
 
-.layout-three-column .special-watchlist {
-  max-width: 150px !important;
-  min-width: 150px !important;
+.layout-three-column .column-3-small {
+  min-width: 165px;
+  max-width: 165px;
   display: inline-block;
+  vertical-align: top;
+}
+
+.layout-three-column .special-watchlist {
+  max-width: 210px !important;
+  min-width: 210px !important;
+  display: inline-block;
+  font-size: 25px !important;
+  font-weight: bold;
 }
 
 .layout-three-column .contents-3 {
@@ -322,8 +327,14 @@ table.footer-wrap .footer-content {
   width: 100%;
 }
 
-table.footer-wrap .link-footer {
-  color: #CCCCCC !important;
+table.footer-wrap a {
+  color: #7f8c8d !important;
+  text-decoration: none;
+}
+
+.link-footer {
+  font-size: 12px;
+  color: #7f8c8d !important;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.1;
   margin-bottom: 15px;
@@ -406,7 +417,7 @@ body {
 .job-descriptions {
   text-align: left;
   font-size: 13px;
-  color: #CCCCCC;
+  color: #7f8c8d;
 }
 
 .new-tenders {

@@ -4,7 +4,7 @@
 		PALLETE 
 ------------------------------------- */
 $primary: #4770A0;
-$grey: #CCCCCC;
+$grey: #7f8c8d;
 $greySoft: #e8e8e8;
 $greyVerySoft: #d6d6d6;
 $divider: #EAEFF4;
@@ -81,28 +81,28 @@ a { color: #2BA6CB;}
 .layout-two-column-center {
 	text-align: center!important;
 	font-size: 0;
-	border: 1px solid $primary;
+	// border: 1px solid $primary;
 	// background:red;
 	.layout-column-20 {
 		min-width: 150px;
 		max-width: 150px;
 		display: inline-block;
 		vertical-align: top;
-		border: 1px solid $primary;
+		// border: 1px solid $primary;
 	}
 	.layout-column-80 {
 		min-width: 350px;
 		max-width: 350px;
 		display: inline-block;
 		vertical-align: top;
-		border: 1px solid $primary;
+		// border: 1px solid $primary;
 		text-align: center!important;
 	}
 	.content-80 {
 		font-size: 14px;
 		text-align: center;
 		width: 100%;
-		background: red;
+		// background: red;
 	}
 }
 
@@ -120,11 +120,20 @@ a { color: #2BA6CB;}
 		vertical-align: top;
 
 	}
-	.special-watchlist {
-		max-width: 150px!important;
-		min-width: 150px!important;
+	.column-3-small {
+		// border: 1px solid red;
+		min-width: 165px;
+		max-width: 165px;
 		display: inline-block;
-		// background: blue;
+		vertical-align: top;
+
+	}
+	.special-watchlist {
+		max-width: 210px!important;
+		min-width: 210px!important;
+		display: inline-block;
+		font-size: 25px!important;
+		font-weight: bold;
 	}
 	.contents-3 {
 		font-size: 14px;
@@ -254,12 +263,17 @@ table.footer-wrap {
 	.footer-content {
 		width: 100%;
 	}
-	.link-footer {
+	a {
 		color: $grey!important;
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+		text-decoration: none;
 	}
 }
 
+.link-footer {
+	font-size: 12px;
+	color: $grey!important;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
 
 /* ------------------------------------- 
 		DIVIDER 
