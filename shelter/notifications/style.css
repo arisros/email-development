@@ -89,7 +89,7 @@ a {
 
 .layout-two-column .layout-column {
   min-width: 180px;
-  max-width: 300px;
+  max-width: 280px;
   display: inline-block;
   vertical-align: top;
 }
@@ -105,15 +105,15 @@ a {
 }
 
 .layout-two-column-center .layout-column-20 {
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 130px;
+  max-width: 130px;
   display: inline-block;
   vertical-align: top;
 }
 
 .layout-two-column-center .layout-column-80 {
-  min-width: 350px;
-  max-width: 350px;
+  min-width: 320px;
+  max-width: 320px;
   display: inline-block;
   vertical-align: top;
   text-align: center !important;
@@ -319,10 +319,6 @@ table.head-wrap {
 /* ------------------------------------- 
 		FOOTER 
 ------------------------------------- */
-table.footer-wrap {
-  max-width: 600px;
-}
-
 table.footer-wrap .footer-content {
   width: 100%;
 }
@@ -445,10 +441,6 @@ body {
 		Nuke it from orbit. It's the only way to be sure. 
 ------------------------------------------------------ */
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-.content-wrapper {
-  max-width: 600px;
-}
-
 /* Be sure to place a .clear element after each set of columns, just to be safe */
 .clear {
   display: block;

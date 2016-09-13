@@ -68,7 +68,7 @@ a { color: #2BA6CB;}
 	font-size: 0;
 	.layout-column {
 		min-width: 180px;
-		max-width: 300px;
+		max-width: 280px;
 		display: inline-block;
 		vertical-align: top;
 	}
@@ -84,15 +84,15 @@ a { color: #2BA6CB;}
 	// border: 1px solid $primary;
 	// background:red;
 	.layout-column-20 {
-		min-width: 150px;
-		max-width: 150px;
+		min-width: 130px;
+		max-width: 130px;
 		display: inline-block;
 		vertical-align: top;
 		// border: 1px solid $primary;
 	}
 	.layout-column-80 {
-		min-width: 350px;
-		max-width: 350px;
+		min-width: 320px;
+		max-width: 320px;
 		display: inline-block;
 		vertical-align: top;
 		// border: 1px solid $primary;
@@ -258,7 +258,7 @@ table.head-wrap { width: 100%; color: $primary}
 		FOOTER 
 ------------------------------------- */
 table.footer-wrap { 
-	max-width: 600px;
+	// max-width: 600px;
 	// background:red;
 	.footer-content {
 		width: 100%;
@@ -383,7 +383,7 @@ a.small-button {
 // /* This should also be a block element, so that it will fill 100% of the .container */
 .content-wrapper {
 	// padding:15px;
-	max-width:600px;
+	// max-width:600px;
 }
 
 // /* Let's make sure tables in the content area are 100% wide */
