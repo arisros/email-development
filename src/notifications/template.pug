@@ -8,48 +8,53 @@ html(lang="en")
 		link(rel="stylesheet", href="style.css", data-embed)
 	body
 		// START WRAPPER
-		table
+		table(width="100%", align="center", style="text-align:center;")
 			tr
-				td(width="10", style="min-width:10px")
 				td
-					// START HEADER LOGO AND SOCIAL BUTTON
-					table.head-wrap
+					table(align="center", style="text-align:center; max-width:600px;")
 						tr
-							// START CONTAINER
-							td.header.container(algin="")
-								// START CONTENT
-								div.content
-									table
-										tr
-											td.ep-logo
-												img(src="http://pasmandor.com/img/cs/Paypal.png", alt="logo")
-											// START Icon Media Social
-											td.social-header(align="right")
-												table
+							td(width="10", style="min-width:10px")
+							td.center(width="100%")
+								// START HEADER LOGO AND SOCIAL BUTTON
+								table.head-wrap.content-wrapper(width="600")
+									tr
+										// START CONTAINER
+										td.header.container(algin="center", style="text-align:center;")
+											// START CONTENT
+											div
+												table(width="100%")
 													tr
-														td.media-social-icon
-															a(href="")
-																img(src="http://pasmandor.com/img/cs/soc-med-icn-03.png", alt="icon-facebook")
-														td.media-social-icon
-															a(href="")
-																img(src="http://pasmandor.com/img/cs/soc-med-icn-04.png", alt="icon-facebook") 
-														td.media-social-icon
-															a(href="")
-																img(src="http://pasmandor.com/img/cs/soc-med-icn-05.png", alt="icon-facebook")
-											// END Icon Media Social
-								// END CONTENT
-							// END CONTAINER
-					// END HEADER LOGO AND SOCIAL BUTTON
+														td.ep-logo
+															img(src="http://pasmandor.com/img/cs/Paypal.png", alt="logo")
+														// START Icon Media Social
+														td.social-header(align="right")
+															table
+																tr
+																	td.media-social-icon
+																		a(href="")
+																			img(src="http://pasmandor.com/img/cs/soc-med-icn-03.png", alt="icon-facebook")
+																	td.media-social-icon
+																		a(href="")
+																			img(src="http://pasmandor.com/img/cs/soc-med-icn-04.png", alt="icon-facebook") 
+																	td.media-social-icon
+																		a(href="")
+																			img(src="http://pasmandor.com/img/cs/soc-med-icn-05.png", alt="icon-facebook")
+														// END Icon Media Social
+											// END CONTENT
+										// END CONTAINER
+								td(width="10", style="min-width:10px")
+								// END HEADER LOGO AND SOCIAL BUTTON
 
 					// START BODY
-					table.body-wrap.init.colp(cellspacing="0" cellpadding="0" border="0")
+					table.body-wrap.init.colp(cellspacing="0" cellpadding="0" border="0",align="center", style="text-align:center; max-width:100%;")
 						// ROW 1
 						tr.colp
+							td(width="10", style="min-width:10px")
 							// START COLUMN 1
 							td.colp
 								// START WRAPPER CONTENT WITH BORDER
-								div.content.ep-container.colp
-									table.colp.center
+								div.ep-container.colp
+									table.colp.center(width="100%")
 										// START TEXT, BUTTON, IMAGES BIG MIDDLE
 										tr
 											td.ep-margin-ud-20
@@ -63,8 +68,8 @@ html(lang="en")
 												table
 													tr
 														td(width="10", style="min-width:10px")
-														td
-															h1.title-notify Hi Idam, Anda Mempunyai Notifikasi Baru
+														td.center
+															h1.title-notify.center Hi Idam, Anda Mempunyai Notifikasi Baru
 														td(width="10", style="min-width:10px")
 										tr
 											td.ep-margin-ud-20
@@ -74,53 +79,77 @@ html(lang="en")
 										tr
 											td.ep-margin-ud-20
 										// END IMAGES BIG IN THE MIDDLE
-										// START DIVIDER COUNTER KEYWORDS FOUND
+										// START DIVIDER WATCHLIST STAGE UPDATE TENDERS YOU CAN BID
 										tr.divider-counter
 											td
-												table(align="center")
+												table
 													tr
 														td.ep-margin-ud-20
 													tr
-														td
-															table.max-keyword
-																tr
-																	// START TEXT KEYWORD
-																	td(width="20", style="min-width:20px")
-																	td KEYWORD (8)
-																	// END TEXT
-														td
-															table
-																tr
-																	td
-																		table
-																			tr
-																				// START NEW TENDERS KEYWORD
-																				td
-																					span.circle.bg-orange 14
-																				td(width="5", style="min-width:5px")
-																				td.value-text New Tenders
-																				// END NEW TENDERS KEYWORD
-														td
-															table
-																tr
-																	td
-																		table
-																			tr
-																				// START TENDER YOU CAN BID
-																				td
-																					span.value.circle.bg-green 23
-																				td(width="5", style="min-width:5px")
-																				td.value-text-more Tender You can Bid
-																				// START TENDER YOU CAN BID
+														td.layout-three-column
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%">
+															<tr>
+															<td width="200" valign="top">
+															<![endif]-->
+															
+															div.column-3.special-watchlist
+																table(width="100%")
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					td 
+																						table.max-keyword
+																							tr
+																								// START TEXT KEYWORD
+																								td KEYWORDS (8)
+																								// END TEXT
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="200" valign="top">
+															<![endif]-->
+															div.column-3
+																table
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					// START NEW TENDERS KEYWORD
+																					td
+																						span.circle.bg-orange 14
+																					td(width="5", style="min-width:5px")
+																					td.value-text New Tenders
+																					// END NEW TENDERS KEYWORD
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="200" valign="top">
+															<![endif]-->
+															div.column-3
+																table
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					// START NEW TENDERS KEYWORD
+																					td
+																						span.circle.bg-green 23
+																					td(width="5", style="min-width:5px")
+																					td.value-text.max-keyword Tenders You can Bid
+																					// END NEW TENDERS KEYWORD
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
 													tr
 														td.ep-margin-ud-20
-
-
-										// END DIVIDER COUNTER KEYWORDS FOUND
+										// END DIVIDER WATCHLIST STAGE UPDATE TENDERS YOU CAN BID
 										// START TENDER LIST
 										tr.tender-list
 											td
-												table
+												table(width="100%")
 													// START LIST TENDER 1
 													tr
 														td(width="5",style="min-width:5px; max-width:5px")
@@ -394,41 +423,106 @@ html(lang="en")
 										// START DIVIDER WATCHLIST STAGE UPDATE TENDERS YOU CAN BID
 										tr.divider-counter
 											td
-												table(align="center")
+												table
 													tr
 														td.ep-margin-ud-20
 													tr
-														td
-															table.max-keyword
-																tr
-																	// START TEXT KEYWORD
-																	td(width="20", style="min-width:20px")
-																	td WATCHLIST (82)
-																	// END TEXT
-														td
-															table
-																tr
-																	td
-																		table
-																			tr
-																				// START NEW TENDERS KEYWORD
-																				td
-																					span.circle.bg-orange 14
-																				td(width="5", style="min-width:5px")
-																				td.value-text Stage Update
-																				// END NEW TENDERS KEYWORD
-														td
-															table
-																tr
-																	td
-																		table
-																			tr
-																				// START TENDER YOU CAN BID
-																				td
-																					span.value.circle.bg-green 23
-																				td(width="5", style="min-width:5px")
-																				td.value-text-more Tender You can Bid
-																				// START TENDER YOU CAN BID
+														td.layout-three-column
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%">
+															<tr>
+															<td width="200" valign="top">
+															<![endif]-->
+															
+															div.column-3.special-watchlist
+																table(width="100%")
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					td 
+																						table.max-keyword
+																							tr
+																								// START TEXT KEYWORD
+																								td WATCHLIST (82)
+																								// END TEXT
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="200" valign="top">
+															<![endif]-->
+															div.column-3
+																table
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					// START NEW TENDERS KEYWORD
+																					td
+																						span.circle.bg-orange 14
+																					td(width="5", style="min-width:5px")
+																					td.value-text Stage Update
+																					// END NEW TENDERS KEYWORD
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="200" valign="top">
+															<![endif]-->
+															div.column-3
+																table
+																	tr
+																		td(width="20", style="min-width:20px")
+																		td.inner
+																			table.contents-3
+																				tr
+																					// START NEW TENDERS KEYWORD
+																					td
+																						span.circle.bg-green 23
+																					td(width="5", style="min-width:5px")
+																					td.value-text.max-keyword Tenders You can Bid
+																					// END NEW TENDERS KEYWORD
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+													tr
+														td.ep-margin-ud-20
+
+											//- td
+											//- 	table(align="center")
+											//- 		tr
+											//- 			td.ep-margin-ud-20
+											//- 		tr
+											//- 			td
+											//- 				table.max-keyword
+											//- 					tr
+											//- 						// START TEXT KEYWORD
+											//- 						td(width="20", style="min-width:20px")
+											//- 						td WATCHLIST (82)
+											//- 						// END TEXT
+											//- 			td
+											//- 				table
+											//- 					tr
+											//- 						td
+											//- 							table
+											//- 								tr
+											//- 									// START NEW TENDERS KEYWORD
+											//- 									td
+											//- 										span.circle.bg-orange 14
+											//- 									td(width="5", style="min-width:5px")
+											//- 									td.value-text Stage Update
+											//- 									// END NEW TENDERS KEYWORD
+											//- 			td
+											//- 				table
+											//- 					tr
+											//- 						td
+											//- 							table
+											//- 								tr
+											//- 									// START TENDER YOU CAN BID
+											//- 									td
+											//- 										span.value.circle.bg-green 23
+											//- 									td(width="5", style="min-width:5px")
+											//- 									td.value-text-more Tender You can Bid
+											//- 									// START TENDER YOU CAN BID
 													tr
 														td.ep-margin-ud-20
 
@@ -437,7 +531,7 @@ html(lang="en")
 										// START TENDER LIST
 										tr.tender-list
 											td
-												table
+												table(width="100%")
 													// START LIST TENDER 1
 													tr
 														td(width="20",style="min-width:10px; max-width:20px")
@@ -691,6 +785,7 @@ html(lang="en")
 					// END FOOTER
 				td(width="10", style="min-width:10px")
 		// END WRAPPER
+
 
 
 		

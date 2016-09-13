@@ -4,7 +4,7 @@
 /* ------------------------------------- 
 		RESETER 
 ------------------------------------- */
-body, ul, li, td, th, tr, table, h1, h2, h3, h4, h5, small, div, p {
+body, ul, li, h1, h2, h3, h4, h5, small, div, p {
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,6 @@ body, ul, li, td, th, tr, table, h1, h2, h3, h4, h5, small, div, p {
 table {
   mso-table-lspace: 0;
   mso-table-rspace: 0;
-  width: 100%;
 }
 
 /* ------------------------------------- 
@@ -100,6 +99,39 @@ a {
   text-align: left;
 }
 
+.increase-font {
+  font-size: 15px;
+}
+
+.layout-three-column {
+  text-align: left;
+  font-size: 0;
+}
+
+.layout-three-column .column-3 {
+  min-width: 220px;
+  max-width: 225px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.layout-three-column .special-watchlist {
+  max-width: 150px !important;
+  min-width: 150px !important;
+  display: inline-block;
+}
+
+.layout-three-column .contents-3 {
+  font-size: 14px;
+  text-align: center;
+}
+
+.max-keyword {
+  text-align: left;
+  line-height: 30px;
+  height: 30px;
+}
+
 .primary {
   background: #4770A0;
 }
@@ -177,7 +209,7 @@ span.circle {
 }
 
 .max-keyword {
-  max-width: 130px;
+  text-align: left !important;
 }
 
 .ep-container {
@@ -218,6 +250,7 @@ table.head-wrap {
 
 .ep-logo {
   max-width: 140px;
+  text-align: left;
 }
 
 .ep-logo img {
@@ -225,8 +258,12 @@ table.head-wrap {
   padding: 10px;
 }
 
+.social-header {
+  width: 150px;
+}
+
 .media-social-icon {
-  max-width: 20px !important;
+  max-width: 80px !important;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -331,50 +368,8 @@ body {
 		Nuke it from orbit. It's the only way to be sure. 
 ------------------------------------------------------ */
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-.container {
-  display: block !important;
-  max-width: 600px !important;
-  margin: 0 auto !important;
-  /* makes it centered */
-  clear: both !important;
-}
-
-/* This should also be a block element, so that it will fill 100% of the .container */
-.content {
+.content-wrapper {
   max-width: 600px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Let's make sure tables in the content area are 100% wide */
-.content table {
-  width: 100%;
-}
-
-/* Odds and ends */
-.column {
-  width: 300px;
-  float: left;
-}
-
-.column tr td {
-  padding: 15px;
-}
-
-.column-wrap {
-  padding: 0 !important;
-  margin: 0 auto;
-  max-width: 600px !important;
-}
-
-.column table {
-  width: 100%;
-}
-
-.social .column {
-  width: 280px;
-  min-width: 279px;
-  float: left;
 }
 
 /* Be sure to place a .clear element after each set of columns, just to be safe */
@@ -383,83 +378,6 @@ body {
   clear: both;
 }
 
-/* ------------------------------------------- 
-		PHONE
-		For clients that support media queries.
-		Nothing fancy. 
--------------------------------------------- */
-@media only screen and (max-width: 480px) {
-  a[class="btn"] {
-    margin-bottom: 10px !important;
-    background-image: none !important;
-    margin-right: 0 !important;
-  }
-  div[class="column"] {
-    width: auto !important;
-    float: none !important;
-  }
-  table.social div[class="column"] {
-    display: none;
-    width: auto !important;
-  }
-  a[class="small-btn"] {
-    display: none;
-  }
-  div[class="col-10"] {
-    width: 100%;
-  }
-}
-
-@media screen and (max-device-width: 320px) {
-  div[class="mobilecontent"] {
-    display: block !important;
-    max-height: none !important;
-  }
-}
-
-.column-3 {
-  color: #4770A0;
-  background: #EAEFF4;
-  padding: 15px 10px !important;
-  border-collapse: none !important;
-  height: 50px;
-}
-
-.column-3 td.col {
-  width: 30%;
-}
-
-.column-2 {
-  font-size: 15px;
-}
-
-.col-3 {
-  float: left;
-  width: 30%;
-}
-
-.col-3 .value {
-  width: 10%;
-}
-
-.col-10 {
-  float: left;
-  width: 80%;
-}
-
-.col-2 {
-  float: left;
-  width: 20%;
-}
-
-.keywords {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-/* ------------------------------------- 
-		ELEMENTS 
-------------------------------------- */
 a {
   color: #2BA6CB;
 }
@@ -475,150 +393,4 @@ a {
   cursor: pointer;
   display: inline-block;
   border-radius: 2px;
-}
-
-.small-btn {
-  text-decoration: none;
-  color: #FFF;
-  background-color: #4770A0;
-  padding: 5px 30px;
-  font-weight: normal;
-  margin-right: 10px;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 2px;
-}
-
-p.callout {
-  padding: 15px;
-  background-color: #ECF8FF;
-  margin-bottom: 15px;
-}
-
-.callout a {
-  font-weight: bold;
-  color: #2BA6CB;
-}
-
-table.social {
-  /* 	padding:15px; */
-  background-color: #ebebeb;
-}
-
-.social .soc-btn {
-  padding: 3px 7px;
-  font-size: 12px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #FFF;
-  font-weight: bold;
-  display: block;
-  text-align: center;
-}
-
-a.fb {
-  background-color: #3B5998 !important;
-}
-
-a.tw {
-  background-color: #1daced !important;
-}
-
-a.gp {
-  background-color: #DB4A39 !important;
-}
-
-a.ms {
-  background-color: #000 !important;
-}
-
-.sidebar .soc-btn {
-  display: block;
-  width: 100%;
-}
-
-/* ------------------------------------- 
-		BODY 
-------------------------------------- */
-table.body-wrap {
-  width: 100%;
-}
-
-/* ------------------------------------- 
-		FOOTER 
-------------------------------------- */
-table.footer-wrap {
-  width: 100%;
-  clear: both !important;
-}
-
-.footer-wrap .container td.content p {
-  border-top: 1px solid #d7d7d7;
-  padding-top: 15px;
-}
-
-.footer-wrap .container td.content p {
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.collapse {
-  margin: 0 !important;
-}
-
-p, ul {
-  margin-bottom: 10px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-p.lead {
-  font-size: 17px;
-}
-
-p.last {
-  margin-bottom: 0px;
-}
-
-ul li {
-  margin-left: 5px;
-  list-style-position: inside;
-}
-
-/* ------------------------------------- 
-		SIDEBAR 
-------------------------------------- */
-ul.sidebar {
-  background: #ebebeb;
-  display: block;
-  list-style-type: none;
-}
-
-ul.sidebar li {
-  display: block;
-  margin: 0;
-}
-
-ul.sidebar li a {
-  text-decoration: none;
-  color: #666;
-  padding: 10px 16px;
-  /* 	font-weight:bold; */
-  margin-right: 10px;
-  /* 	text-align:center; */
-  cursor: pointer;
-  border-bottom: 1px solid #777777;
-  border-top: 1px solid #FFFFFF;
-  display: block;
-  margin: 0;
-}
-
-ul.sidebar li a.last {
-  border-bottom-width: 0px;
-}
-
-ul.sidebar li a h1, ul.sidebar li a h2, ul.sidebar li a h3, ul.sidebar li a h4, ul.sidebar li a h5, ul.sidebar li a h6, ul.sidebar li a p {
-  margin-bottom: 0 !important;
 }
