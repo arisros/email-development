@@ -160,7 +160,10 @@ span.circle {
 .ep-margin-ud-40 {
 	height:40px; line-height:40px; font-size:13px;
 }
-
+.link {
+	font-size: 16px;
+	color: $primary;
+}
 .max-keyword {
 	text-align: left!important
 }
@@ -175,9 +178,14 @@ h1.title-notify {
 	color: $primary;
 	font-size: 22px;
 	font-weight: 500;
+	text-align: center;
 }
 .left-text {
 	text-align: left;
+}
+.center-text {
+	width: 100%;
+	text-align: center!important;
 }
 
 
