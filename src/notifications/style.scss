@@ -34,7 +34,10 @@ table {
 ------------------------------------- */
 
 h1,h2,h3,h4,h5,h6 {
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+td,p,a, button, .btn, {
+	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif!important;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
 
@@ -105,7 +108,14 @@ a { color: #2BA6CB;}
 		// background: red;
 	}
 }
-
+.big-text {
+	font-size: 16px!important;
+	// background: red;
+}
+.arrow {
+	vertical-align: center;
+	// background: blue;
+}
 .increase-font {
 	font-size: 15px;
 }
@@ -114,23 +124,23 @@ a { color: #2BA6CB;}
 	font-size: 0;
 	.column-3 {
 		// border: 1px solid red;
-		min-width: 220px;
-		max-width: 225px;
+		min-width: 215px;
+		max-width: 215px;
 		display: inline-block;
 		vertical-align: top;
 
 	}
 	.column-3-small {
 		// border: 1px solid red;
-		min-width: 165px;
-		max-width: 165px;
+		min-width: 172px;
+		max-width: 172px;
 		display: inline-block;
 		vertical-align: top;
 
 	}
 	.special-watchlist {
-		max-width: 210px!important;
-		min-width: 210px!important;
+		max-width: 200px!important;
+		min-width: 200px!important;
 		display: inline-block;
 		font-size: 25px!important;
 		font-weight: bold;
@@ -182,7 +192,8 @@ a { color: #2BA6CB;}
 	color: $white;
 }
 span.circle {
-	padding:5px;
+	padding:3px 4px;
+	border-radius: 35px;
 }
 .ep-margin-ud-5 {
 	height:5px; line-height:5px; font-size:5px;
@@ -240,7 +251,6 @@ table.head-wrap { width: 100%; color: $primary}
 	text-align: left;
 	img {
 	max-width: 140px;
-	padding:10px;
 	}
 }
 .social-header {

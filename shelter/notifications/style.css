@@ -18,10 +18,14 @@ table {
 		TYPOGRAPHY 
 ------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.1;
   margin-bottom: 15px;
   color: #000;
+}
+
+td, p, a, button, .btn {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -125,6 +129,14 @@ a {
   width: 100%;
 }
 
+.big-text {
+  font-size: 16px !important;
+}
+
+.arrow {
+  vertical-align: center;
+}
+
 .increase-font {
   font-size: 15px;
 }
@@ -135,22 +147,22 @@ a {
 }
 
 .layout-three-column .column-3 {
-  min-width: 220px;
-  max-width: 225px;
+  min-width: 215px;
+  max-width: 215px;
   display: inline-block;
   vertical-align: top;
 }
 
 .layout-three-column .column-3-small {
-  min-width: 165px;
-  max-width: 165px;
+  min-width: 172px;
+  max-width: 172px;
   display: inline-block;
   vertical-align: top;
 }
 
 .layout-three-column .special-watchlist {
-  max-width: 210px !important;
-  min-width: 210px !important;
+  max-width: 200px !important;
+  min-width: 200px !important;
   display: inline-block;
   font-size: 25px !important;
   font-weight: bold;
@@ -210,7 +222,8 @@ a {
 }
 
 span.circle {
-  padding: 5px;
+  padding: 3px 4px;
+  border-radius: 35px;
 }
 
 .ep-margin-ud-5 {
@@ -301,7 +314,6 @@ table.head-wrap {
 
 .ep-logo img {
   max-width: 140px;
-  padding: 10px;
 }
 
 .social-header {
