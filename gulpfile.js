@@ -3,6 +3,7 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var replace = require('gulp-replace');
 var inlineCss = require('gulp-inline-css');
+var hmtlMinify = require('gulp-html-minifier');
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -81,6 +82,11 @@ gulp.task('inline-css', function () {
 		.pipe(gulp.dest('ready-to-fly/'));
 });
 
+gulp.task('html-min', function () {
+	return gulp.src('ready-to-fly/**/*.html')
+		.pipe(hmtlMinify({collapseWhitespace: true}))
+		.pipe(gulp.dest('ready-to-fly-htmlmin/'));
+});
 
 
 gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
@@ -104,6 +110,23 @@ gulp.task('send', function () {
 		.pipe(sendEmail(options));
 });
 
+gulp.task('mail-min', function () {
+	return gulp.src('./ready-to-fly-htmlmin/notifications/template.html')
+		.pipe(mail({
+			subject: 'Halo, You have notify',
+			to: [
+				'arisjiratkurniawan@gmail.com'
+				// 'arisjirat88@yahoo.com',
+				// 'aris@docotel.co.id',
+				// 'arisjirat@icloud.com'
+			],
+			cc: [
+				'arisjirat88@yahoo.com'
+			],
+			from: 'Eproc <arisjiratkurniawan@gmail.com>',
+			smtp: smptInfo
+		}));
+});
 gulp.task('mail', function () {
 	return gulp.src('./ready-to-fly/notifications/template.html')
 		.pipe(mail({
