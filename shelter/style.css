@@ -1,8 +1,9 @@
+
 /* ------------------------------------- 
 		PALLETE 
 ------------------------------------- */
 /* ------------------------------------- 
-		RESET
+		RESETER 
 ------------------------------------- */
 body, ul, li, h1, h2, h3, h4, h5, small, div, p {
   margin: 0;
@@ -10,7 +11,7 @@ body, ul, li, h1, h2, h3, h4, h5, small, div, p {
 }
 
 /* ------------------------------------- 
-		ELEMENT
+		TYPOGRAPHY 
 ------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -466,4 +467,16 @@ a {
   cursor: pointer;
   display: inline-block;
   border-radius: 2px;
+}
+
+
+
+
+body {
+  font-family: Tahoma;
+  font-size: 15px;
+}
+
+table.wrapper {
+  max-width: 600px;
 }

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Template Email New User</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="style.css" data-embed> -->
+  </head>
+  <style>
+    body, ul, li, h1, h2, h3, h4, h5, small, div, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ------------------------------------- 
+        TYPOGRAPHY 
+    ------------------------------------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    td, p, a, button, .btn {
+      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    }
+
+    p {
+      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+    }
+
+    h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+      font-size: 60%;
+      color: #6f6f6f;
+      line-height: 0;
+      text-transform: none;
+    }
+
+    h1 {
+      font-weight: 200;
+      font-size: 44px;
+    }
+
+    h2 {
+      font-weight: 200;
+      font-size: 37px;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 27px;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 23px;
+    }
+
+    h5 {
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    h6 {
+      font-weight: 900;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #444;
+    }
+
+    a {
+      color: #416F9C;
+      text-decoration: none;
+    }
+
+    table, tbody, thead, td, th, tr {
+      border-collapse: collapse;
+      border: 0;
+    }
+
+    /* ------------------------------------- 
+        GLOBAL 
+    ------------------------------------- */
+    .btn-wrapper {
+      margin: 20px 0;
+    }
+
+    .btn-wrapper a {
+      text-decoration: none;
+      border-radius: 2px;
+      color: #FFF;
+      background-color: #416F9C;
+      padding: 13px 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .no-gap {
+      padding: 0px !important;
+    }
+
+    .init {
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+
+    .colp {
+      border-collapse: collapse !important;
+    }
+
+    .clearfix .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .collapse {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      height: 100%;
+    }
+
+    .wrapper-body {
+      background: #EDEDED;
+      padding: 0 10px;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 600px;
+      min-height: 40px;
+    }
+
+    .header {
+      background: #416F9C;
+      color: #FFFFFF;
+    }
+
+    .header p, .header img {
+      padding: 5px 20px;
+    }
+
+    .header img {
+      width: 80px;
+      margin-top: 10px;
+    }
+
+    .banner {
+      background-image: url("http://pasmandor.com/img/cs/jkt-banner.jpg");
+      color: #FFFFFF;
+      text-align: center;
+      min-height: 200px;
+      padding: 20px 20px 200px 20px;
+    }
+
+    .banner h1 {
+      padding-top: 1%;
+      color: #FFFFFF;
+    }
+
+    .banner p {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 29%;
+    }
+
+    .banner img {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      background: #FFFFFF;
+      color: #AEAEAE;
+      font-size: 14px;
+    }
+
+    .content p, .content .flex {
+      padding: 4px 40px;
+    }
+
+    .content p.bold {
+      padding-top: 20px;
+      font-weight: bold;
+      color: #8F8F8F;
+    }
+
+    .flex-80 {
+      float: left;
+      width: 80%;
+    }
+
+    .flex-70 {
+      float: left;
+      width: 70%;
+    }
+
+    .flex-60 {
+      float: left;
+      width: 60%;
+    }
+
+    .flex-50 {
+      float: left;
+      width: 50%;
+    }
+
+    .flex-40 {
+      float: left;
+      width: 40%;
+    }
+
+    .flex-30 {
+      float: left;
+      width: 30%;
+    }
+
+    .flex-20 {
+      float: left;
+      width: 20%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      /* styles for mobile browsers smaller than 480px; (iPhone) */
+      .flex-20, .flex-30, .flex-40, .flex-50, .flex-60, .flex-70, .flex-80 {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    @media only screen and (max-device-width: 480px) {
+      /* styles for mobile browsers smaller than 480px; (iPhone) */
+      .flex-20, .flex-30, .flex-40, .flex-50, .flex-60, .flex-70, .flex-80 {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    .address p {
+      padding: 0;
+    }
+
+    .google-play {
+      text-align: right;
+      padding-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .google-play {
+        text-align: left;
+        margin-top: 15px;
+      }
+    }
+
+    .google-play img {
+      width: 130px;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .divider-dash {
+      border-top: 1px dashed #e1e1e1;
+      margin: 20px 40px;
+    }
+
+    .divider .divider-wrapper {
+      padding: 0 40px;
+    }
+
+    .divider .term-policies {
+      color: #AEAEAE;
+      padding: 10px 0;
+    }
+
+    .divider .term-policies a {
+      color: #AEAEAE;
+      font-size: 14px;
+      padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .divider .social {
+        text-align: right !important;
+      }
+    }
+
+    .divider .social img {
+      width: 28px;
+      margin-top: 5px;
+      padding: 5px;
+    }
+
+    .footer {
+      background: #FFFFFF;
+      color: #AEAEAE;
+    }
+
+    .footer td {
+      text-align: center;
+      font-size: 12px;
+    }
+
+  </style>
+  <body>
+    <!-- START WRAPPER-->
+    <div class="wrapper-body"> 
+      <!-- Header {Text} {Logo}-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table class="wrapper header" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td> 
+                  <p><b>Hey Idam,</b></p>
+                </td>
+                <td class="pull-right"><img src="http://pasmandor.com/img/cs/eproc-email-logo.png" alt="logo"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Banner {h1 : Welcome} {p : describe}-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table class="wrapper no-gap banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  <h1>Welcome</h1>
+                  <p>Eproc is a search engine for public sector bidding contests. We will help you find and bid on tenders in a fast and easy way</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Content {Thanks : //Thanks} {Button: Confirm}-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table class="wrapper content" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td> 
+                  <!-- Thanks Content-->
+                  <p class="bold">Thanks for signing up to Eproc, great to you have you on board for the beta!</p>
+                  <p>For complete your sign up has been registered please confirm your email address by clicking button bellow :</p>
+                  <!-- Button Confirm-->
+                  <p class="btn-wrapper"><a>Confirm Your Account</a></p>
+                  <p>also here is <a href="#">quick video</a>  to help you getting started</p>
+                  <p>If you got any problem, you could contact customer service at <a href="#">help@eproc.asia</a></p>
+                  <div class="divider-dash"></div>
+                  <p><img src="http://pasmandor.com/img/cs/eproc-grey.png" alt="logo"></p>
+                  <div class="flex">
+                    <div class="flex-60 address">
+                      <p>Grand ITC Permata Hijau Blok Ruby no. 9</p>
+                      <p>Jalan Letjen Soepono, Jakarta 12210</p>
+                    </div>
+                    <div class="flex-40 google-play"><a href=""><img src="http://pasmandor.com/img/cs/android-logo.png" alt="logo-playstore"></a></div>
+                    <div class="cleafix"></div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Before Footer {Terms & Policy list} {Button Social Media}-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table class="wrapper divider" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="divider-wrapper">
+                  <!-- START Icon Media Social-->
+                  <div class="term-policies flex-70">
+                    <table>
+                      <tr>
+                        <td> <a href="">Term & Conditions</a></td>
+                        <td> <a href="">Privacy Policy</a></td>
+                        <td> <a href="">FAQ</a></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="social flex-30">
+                    <table>
+                      <tr>
+                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-03-darker.png" alt="icon-facebook"></a></td>
+                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-04-darker.png" alt="icon-facebook"></a></td>
+                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-05-darker.png" alt="icon-facebook"></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="clearfix"></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Before Footer {Terms & Policy list} {Button Social Media}-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <table class="wrapper footer" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <!-- Footer-->
+                <td> 
+                  <p>&copy 2016 Eproc All Right Reserved</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

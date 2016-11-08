@@ -92,9 +92,9 @@ gulp.task('html-min', function () {
 gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 	browserSync({
 		injectChanges: true,
-		files: 'shelter/notifications/template.html',
+		files: 'shelter/new-user/template.html',
 		server: {
-			baseDir: './shelter/notifications/',
+			baseDir: './shelter/new-user/',
 			index: 'template.html'
 		},
 	});
@@ -106,12 +106,12 @@ gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 
 // Gulp-email wait approval from mailgun account
 gulp.task('send', function () {
-	return gulp.src('ready-to-fly/notifications/*.html')
+	return gulp.src('ready-to-fly/new-user/*.html')
 		.pipe(sendEmail(options));
 });
 
 gulp.task('mail-min', function () {
-	return gulp.src('./ready-to-fly-htmlmin/notifications/template.html')
+	return gulp.src('./ready-to-fly-htmlmin/new-user/template.html')
 		.pipe(mail({
 			subject: 'Halo, You have notify',
 			to: [
@@ -128,7 +128,7 @@ gulp.task('mail-min', function () {
 		}));
 });
 gulp.task('mail', function () {
-	return gulp.src('./ready-to-fly/notifications/template.html')
+	return gulp.src('./ready-to-fly/new-user/template.html')
 		.pipe(mail({
 			subject: 'Halo',
 			to: [

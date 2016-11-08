@@ -1,0 +1,157 @@
+.wrapper-body {
+	background: $gray-base;
+	padding: 0 10px;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 600px;
+	min-height: 40px;
+}
+.header {
+	background: $brand-primary;
+	color: $white;
+	p, img {
+		padding: 5px 20px ;
+	}
+	img {
+		width: 80px;
+		margin-top: 10px;
+	}
+}
+.banner {
+	background-image: url("http://pasmandor.com/img/cs/jkt-banner.jpg");
+	color: $white;
+	text-align: center;
+	min-height: 200px;
+	padding: 20px 20px 200px 20px;
+	h1 {
+		padding-top: 1%;
+		color: $white;
+	}
+	p {
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 29%;
+	}
+	img {
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.content {
+	background: $white;
+	color: $text;
+	font-size: 14px;
+	p, .flex{
+		padding: 4px 40px;
+	}
+	p.bold {
+		padding-top: 20px;
+		font-weight: bold;
+		color: $text-darker;
+	}
+}
+.flex-80 {
+	float: left;
+	width: 80%;
+}
+.flex-70 {
+	float: left;
+	width: 70%;
+}
+.flex-60 {
+	float: left;
+	width: 60%;
+}
+.flex-50 {
+	float: left;
+	width: 50%;
+}
+.flex-40 {
+	float: left;
+	width: 40%;
+}
+.flex-30 {
+	float: left;
+	width: 30%;
+}
+.flex-20 {
+	float: left;
+	width: 20%;
+}
+
+@media only screen and (max-width:480px){
+	/* styles for mobile browsers smaller than 480px; (iPhone) */ 
+ 	.flex-20,.flex-30,.flex-40,.flex-50,.flex-60,.flex-70,.flex-80 {
+ 		width: 100%;
+ 		float: none;
+ 	}
+}
+@media only screen and (max-device-width:480px){
+	/* styles for mobile browsers smaller than 480px; (iPhone) */ 
+ 	.flex-20,.flex-30,.flex-40,.flex-50,.flex-60,.flex-70,.flex-80 {
+ 		width: 100%;
+ 		float: none;
+ 	}
+}
+
+
+.address {
+	p {
+		padding: 0;
+	}
+}
+.google-play {
+	@media only screen and (max-width:480px){
+		text-align: left;
+		margin-top: 15px;
+	}
+	text-align: right;
+	padding-bottom: 20px;
+	img {
+		width: 130px;
+	}
+}
+
+.pull-right {
+	text-align: right;
+}
+.divider-dash {
+	border-top: 1px dashed lighten($text, 20%);
+	margin: 20px 40px;
+}
+
+.divider {
+	.divider-wrapper {
+		padding: 0 40px;
+	}
+	.term-policies {
+		color: $text;
+		padding: 10px 0;
+		a {
+			color: $text;
+			font-size: 14px;
+			padding-right: 20px;
+		}
+	}
+	.social {
+		@media only screen and (max-width:480px){
+			text-align: right!important;
+		}
+		img {
+			width: 28px;
+			margin-top: 5px; 
+			padding: 5px;
+		}
+	}
+}
+.footer {
+	background: $white;
+	color: $text;
+	td {
+		text-align: center;
+		font-size: 12px;
+	}
+}
