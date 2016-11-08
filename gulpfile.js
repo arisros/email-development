@@ -14,34 +14,12 @@ var mail = require('gulp-mail');
 var smptInfo = {
 	auth: { 
 		user: 'arisjiratkurniawan@gmail.com',
-		pass : 'F7f%4#@F7f%4#@'
 	},
 	host: 'smtp.gmail.com',
 	secureConnection: true,
 	port: 465
 };
 
-// Gulp-email wait approval from mailgun account
-// var sendEmail = require('gulp-email');
-// var options = {
-//         user: 'api:key-7bb35e5c051d738163e69000c49bc18a',
-//         url: 'https://api.mailgun.net/v3/sandbox25f420ce8ecf41878e7b9836d3c0ec9e.mailgun.org/messages',
-//         form: {
-//             from: 'John Doe <John.Doe@gmail.com>',
-//             to: 'Fulano Mengano <arisjiratkurniawan@gmail.com>',
-//             subject: 'The last dist',
-//         }
-//     };
-
-// 
-// 
-// Doesn't Work yet!
-// var emailBuilder = require('gulp-email-builder');
-// var options = { encodeSpecialChars: true };
-// var buildEmail = new emailBuilder({ encodeSpecialChars: true});
-
-// Current Date
-var current_date = new Date().toString();
 var email_subject = 'Notification Eproc';
 var remote_imgs_basepath = 'http://pasmandor.com/img/cs/';
 
@@ -103,12 +81,6 @@ gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 	gulp.watch('shelter/**/*.html', ['html-watch']);
 });
 
-
-// Gulp-email wait approval from mailgun account
-gulp.task('send', function () {
-	return gulp.src('ready-to-fly/new-user/*.html')
-		.pipe(sendEmail(options));
-});
 
 gulp.task('mail-min', function () {
 	return gulp.src('./ready-to-fly-htmlmin/new-user/template.html')

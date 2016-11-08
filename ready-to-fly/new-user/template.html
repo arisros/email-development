@@ -4,347 +4,36 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Template Email New User</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="style.css" data-embed> -->
+    
+    
   </head>
-  <style>
-    body, ul, li, h1, h2, h3, h4, h5, small, div, p {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* ------------------------------------- 
-        TYPOGRAPHY 
-    ------------------------------------- */
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      line-height: 1.1;
-      margin-bottom: 15px;
-      color: #000;
-    }
-
-    td, p, a, button, .btn {
-      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-    }
-
-    p {
-      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
-    }
-
-    h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-      font-size: 60%;
-      color: #6f6f6f;
-      line-height: 0;
-      text-transform: none;
-    }
-
-    h1 {
-      font-weight: 200;
-      font-size: 44px;
-    }
-
-    h2 {
-      font-weight: 200;
-      font-size: 37px;
-    }
-
-    h3 {
-      font-weight: 500;
-      font-size: 27px;
-    }
-
-    h4 {
-      font-weight: 500;
-      font-size: 23px;
-    }
-
-    h5 {
-      font-weight: 900;
-      font-size: 17px;
-    }
-
-    h6 {
-      font-weight: 900;
-      font-size: 14px;
-      text-transform: uppercase;
-      color: #444;
-    }
-
-    a {
-      color: #416F9C;
-      text-decoration: none;
-    }
-
-    table, tbody, thead, td, th, tr {
-      border-collapse: collapse;
-      border: 0;
-    }
-
-    /* ------------------------------------- 
-        GLOBAL 
-    ------------------------------------- */
-    .btn-wrapper {
-      margin: 20px 0;
-    }
-
-    .btn-wrapper a {
-      text-decoration: none;
-      border-radius: 2px;
-      color: #FFF;
-      background-color: #416F9C;
-      padding: 13px 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .no-gap {
-      padding: 0px !important;
-    }
-
-    .init {
-      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    }
-
-    .colp {
-      border-collapse: collapse !important;
-    }
-
-    .clearfix .clearfix:after {
-      visibility: hidden;
-      display: block;
-      font-size: 0;
-      content: " ";
-      clear: both;
-      height: 0;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .collapse {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: none;
-      width: 100% !important;
-      height: 100%;
-    }
-
-    .wrapper-body {
-      background: #EDEDED;
-      padding: 0 10px;
-    }
-
-    .wrapper {
-      margin: 0 auto;
-      max-width: 600px;
-      min-height: 40px;
-    }
-
-    .header {
-      background: #416F9C;
-      color: #FFFFFF;
-    }
-
-    .header p, .header img {
-      padding: 5px 20px;
-    }
-
-    .header img {
-      width: 80px;
-      margin-top: 10px;
-    }
-
-    .banner {
-      background-image: url("http://pasmandor.com/img/cs/jkt-banner.jpg");
-      color: #FFFFFF;
-      text-align: center;
-      min-height: 200px;
-      padding: 20px 20px 200px 20px;
-    }
-
-    .banner h1 {
-      padding-top: 1%;
-      color: #FFFFFF;
-    }
-
-    .banner p {
-      width: 80%;
-      margin: 0 auto;
-      padding-bottom: 29%;
-    }
-
-    .banner img {
-      border: 0;
-      padding: 0;
-      margin: 0;
-    }
-
-    .content {
-      background: #FFFFFF;
-      color: #AEAEAE;
-      font-size: 14px;
-    }
-
-    .content p, .content .flex {
-      padding: 4px 40px;
-    }
-
-    .content p.bold {
-      padding-top: 20px;
-      font-weight: bold;
-      color: #8F8F8F;
-    }
-
-    .flex-80 {
-      float: left;
-      width: 80%;
-    }
-
-    .flex-70 {
-      float: left;
-      width: 70%;
-    }
-
-    .flex-60 {
-      float: left;
-      width: 60%;
-    }
-
-    .flex-50 {
-      float: left;
-      width: 50%;
-    }
-
-    .flex-40 {
-      float: left;
-      width: 40%;
-    }
-
-    .flex-30 {
-      float: left;
-      width: 30%;
-    }
-
-    .flex-20 {
-      float: left;
-      width: 20%;
-    }
-
-    @media only screen and (max-width: 480px) {
-      /* styles for mobile browsers smaller than 480px; (iPhone) */
-      .flex-20, .flex-30, .flex-40, .flex-50, .flex-60, .flex-70, .flex-80 {
-        width: 100%;
-        float: none;
-      }
-    }
-
-    @media only screen and (max-device-width: 480px) {
-      /* styles for mobile browsers smaller than 480px; (iPhone) */
-      .flex-20, .flex-30, .flex-40, .flex-50, .flex-60, .flex-70, .flex-80 {
-        width: 100%;
-        float: none;
-      }
-    }
-
-    .address p {
-      padding: 0;
-    }
-
-    .google-play {
-      text-align: right;
-      padding-bottom: 20px;
-    }
-
-    @media only screen and (max-width: 480px) {
-      .google-play {
-        text-align: left;
-        margin-top: 15px;
-      }
-    }
-
-    .google-play img {
-      width: 130px;
-    }
-
-    .pull-right {
-      text-align: right;
-    }
-
-    .divider-dash {
-      border-top: 1px dashed #e1e1e1;
-      margin: 20px 40px;
-    }
-
-    .divider .divider-wrapper {
-      padding: 0 40px;
-    }
-
-    .divider .term-policies {
-      color: #AEAEAE;
-      padding: 10px 0;
-    }
-
-    .divider .term-policies a {
-      color: #AEAEAE;
-      font-size: 14px;
-      padding-right: 20px;
-    }
-
-    @media only screen and (max-width: 480px) {
-      .divider .social {
-        text-align: right !important;
-      }
-    }
-
-    .divider .social img {
-      width: 28px;
-      margin-top: 5px;
-      padding: 5px;
-    }
-
-    .footer {
-      background: #FFFFFF;
-      color: #AEAEAE;
-    }
-
-    .footer td {
-      text-align: center;
-      font-size: 12px;
-    }
-
-  </style>
-  <body>
+  <body style="-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; height: 100%; margin: 0; padding: 0; width: 100% !important;">
     <!-- START WRAPPER-->
-    <div class="wrapper-body"> 
+    <div class="wrapper-body" style="background: #EDEDED; margin: 0; padding: 0 10px;"> 
       <!-- Header {Text} {Logo}-->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <table class="wrapper header" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td> 
-                  <p><b>Hey Idam,</b></p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse;">
+        <tr style="border: 0; border-collapse: collapse;">
+          <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+            <table class="wrapper header" width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #416F9C; border: 0; border-collapse: collapse; color: #FFFFFF; margin: 0 auto; max-width: 600px; min-height: 40px;">
+              <tr style="border: 0; border-collapse: collapse;">
+                <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"> 
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 5px 20px;"><b>Hey Idam,</b></p>
                 </td>
-                <td class="pull-right"><img src="http://pasmandor.com/img/cs/eproc-email-logo.png" alt="logo"></td>
+                <td class="pull-right" style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-align: right;"><img src="http://pasmandor.com/img/cs/eproc-email-logo.png" alt="logo" style="margin-top: 10px; max-width: 100%; padding: 5px 20px; width: 80px;"></td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
       <!-- Banner {h1 : Welcome} {p : describe}-->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <table class="wrapper no-gap banner" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td>
-                  <h1>Welcome</h1>
-                  <p>Eproc is a search engine for public sector bidding contests. We will help you find and bid on tenders in a fast and easy way</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse;">
+        <tr style="border: 0; border-collapse: collapse;">
+          <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+            <table class="wrapper no-gap banner" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-image: url('http://pasmandor.com/img/cs/jkt-banner.jpg'); border: 0; border-collapse: collapse; color: #FFFFFF; margin: 0 auto; max-width: 600px; min-height: 200px; padding: 0px !important; text-align: center;">
+              <tr style="border: 0; border-collapse: collapse;">
+                <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+                  <h1 style="color: #FFFFFF; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 44px; font-weight: 200; line-height: 1.1; margin: 0; margin-bottom: 15px; padding: 0; padding-top: 1%;">Welcome</h1>
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0 auto; padding: 0; padding-bottom: 29%; width: 80%;">Eproc is a search engine for public sector bidding contests. We will help you find and bid on tenders in a fast and easy way</p>
                 </td>
               </tr>
             </table>
@@ -352,28 +41,28 @@
         </tr>
       </table>
       <!-- Content {Thanks : //Thanks} {Button: Confirm}-->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <table class="wrapper content" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse;">
+        <tr style="border: 0; border-collapse: collapse;">
+          <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+            <table class="wrapper content" width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #FFFFFF; border: 0; border-collapse: collapse; color: #AEAEAE; font-size: 14px; margin: 0 auto; max-width: 600px; min-height: 40px;">
+              <tr style="border: 0; border-collapse: collapse;">
+                <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"> 
                   <!-- Thanks Content-->
-                  <p class="bold">Thanks for signing up to Eproc, great to you have you on board for the beta!</p>
-                  <p>For complete your sign up has been registered please confirm your email address by clicking button bellow :</p>
+                  <p class="bold" style="color: #8F8F8F; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-weight: bold; margin: 0; padding: 4px 40px; padding-top: 20px;">Thanks for signing up to Eproc, great to you have you on board for the beta!</p>
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 4px 40px;">For complete your sign up has been registered please confirm your email address by clicking button bellow :</p>
                   <!-- Button Confirm-->
-                  <p class="btn-wrapper"><a>Confirm Your Account</a></p>
-                  <p>also here is <a href="#">quick video</a>  to help you getting started</p>
-                  <p>If you got any problem, you could contact customer service at <a href="#">help@eproc.asia</a></p>
-                  <div class="divider-dash"></div>
-                  <p><img src="http://pasmandor.com/img/cs/eproc-grey.png" alt="logo"></p>
-                  <div class="flex">
-                    <div class="flex-60 address">
-                      <p>Grand ITC Permata Hijau Blok Ruby no. 9</p>
-                      <p>Jalan Letjen Soepono, Jakarta 12210</p>
+                  <p class="btn-wrapper" style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 20px 0; padding: 4px 40px;"><a style="background-color: #416F9C; border-radius: 2px; color: #FFF; cursor: pointer; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-weight: bold; padding: 13px 16px; text-decoration: none;">Confirm Your Account</a></p>
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 4px 40px;">also here is <a href="#" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;">quick video</a>  to help you getting started</p>
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 4px 40px;">If you got any problem, you could contact customer service at <a href="#" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;">help@eproc.asia</a></p>
+                  <div class="divider-dash" style="border-top: 1px dashed #e1e1e1; margin: 20px 40px; padding: 0;"></div>
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 4px 40px;"><img src="http://pasmandor.com/img/cs/eproc-grey.png" alt="logo" style="max-width: 100%;"></p>
+                  <div class="flex" style="margin: 0; padding: 4px 40px;">
+                    <div class="flex-60 address" style="float: left; margin: 0; padding: 0; width: 60%;">
+                      <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 0;">Grand ITC Permata Hijau Blok Ruby no. 9</p>
+                      <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 0;">Jalan Letjen Soepono, Jakarta 12210</p>
                     </div>
-                    <div class="flex-40 google-play"><a href=""><img src="http://pasmandor.com/img/cs/android-logo.png" alt="logo-playstore"></a></div>
-                    <div class="cleafix"></div>
+                    <div class="flex-40 google-play" style="float: left; margin: 0; padding: 0; padding-bottom: 20px; text-align: right; width: 40%;"><a href="" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;"><img src="http://pasmandor.com/img/cs/android-logo.png" alt="logo-playstore" style="max-width: 100%; width: 130px;"></a></div>
+                    <div class="cleafix" style="margin: 0; padding: 0;"></div>
                   </div>
                 </td>
               </tr>
@@ -382,32 +71,32 @@
         </tr>
       </table>
       <!-- Before Footer {Terms & Policy list} {Button Social Media}-->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <table class="wrapper divider" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td class="divider-wrapper">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse;">
+        <tr style="border: 0; border-collapse: collapse;">
+          <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+            <table class="wrapper divider" width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse; margin: 0 auto; max-width: 600px; min-height: 40px;">
+              <tr style="border: 0; border-collapse: collapse;">
+                <td class="divider-wrapper" style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; padding: 0 40px;">
                   <!-- START Icon Media Social-->
-                  <div class="term-policies flex-70">
-                    <table>
-                      <tr>
-                        <td> <a href="">Term & Conditions</a></td>
-                        <td> <a href="">Privacy Policy</a></td>
-                        <td> <a href="">FAQ</a></td>
+                  <div class="term-policies flex-70" style="color: #AEAEAE; float: left; margin: 0; padding: 10px 0; width: 70%;">
+                    <table style="border: 0; border-collapse: collapse;">
+                      <tr style="border: 0; border-collapse: collapse;">
+                        <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"> <a href="" style="color: #AEAEAE; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-size: 14px; padding-right: 20px; text-decoration: none;">Term & Conditions</a></td>
+                        <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"> <a href="" style="color: #AEAEAE; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-size: 14px; padding-right: 20px; text-decoration: none;">Privacy Policy</a></td>
+                        <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"> <a href="" style="color: #AEAEAE; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-size: 14px; padding-right: 20px; text-decoration: none;">FAQ</a></td>
                       </tr>
                     </table>
                   </div>
-                  <div class="social flex-30">
-                    <table>
-                      <tr>
-                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-03-darker.png" alt="icon-facebook"></a></td>
-                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-04-darker.png" alt="icon-facebook"></a></td>
-                        <td class="media-social-icon"><a href=""><img src="http://pasmandor.com/img/cs/soc-med-icn-05-darker.png" alt="icon-facebook"></a></td>
+                  <div class="social flex-30" style="float: left; margin: 0; padding: 0; width: 30%;">
+                    <table style="border: 0; border-collapse: collapse;">
+                      <tr style="border: 0; border-collapse: collapse;">
+                        <td class="media-social-icon" style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"><a href="" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;"><img src="http://pasmandor.com/img/cs/soc-med-icn-03-darker.png" alt="icon-facebook" style="margin-top: 5px; max-width: 100%; padding: 5px; width: 28px;"></a></td>
+                        <td class="media-social-icon" style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"><a href="" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;"><img src="http://pasmandor.com/img/cs/soc-med-icn-04-darker.png" alt="icon-facebook" style="margin-top: 5px; max-width: 100%; padding: 5px; width: 28px;"></a></td>
+                        <td class="media-social-icon" style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;"><a href="" style="color: #416F9C; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; text-decoration: none;"><img src="http://pasmandor.com/img/cs/soc-med-icn-05-darker.png" alt="icon-facebook" style="margin-top: 5px; max-width: 100%; padding: 5px; width: 28px;"></a></td>
                       </tr>
                     </table>
                   </div>
-                  <div class="clearfix"></div>
+                  <div class="clearfix" style="margin: 0; padding: 0;"></div>
                 </td>
               </tr>
             </table>
@@ -415,14 +104,14 @@
         </tr>
       </table>
       <!-- Before Footer {Terms & Policy list} {Button Social Media}-->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <table class="wrapper footer" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0; border-collapse: collapse;">
+        <tr style="border: 0; border-collapse: collapse;">
+          <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important;">
+            <table class="wrapper footer" width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #FFFFFF; border: 0; border-collapse: collapse; color: #AEAEAE; margin: 0 auto; max-width: 600px; min-height: 40px;">
+              <tr style="border: 0; border-collapse: collapse;">
                 <!-- Footer-->
-                <td> 
-                  <p>&copy 2016 Eproc All Right Reserved</p>
+                <td style="border: 0; border-collapse: collapse; font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; font-size: 12px; text-align: center;"> 
+                  <p style="font-family: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !important; margin: 0; padding: 0;">&copy; 2016 Eproc All Right Reserved</p>
                 </td>
               </tr>
             </table>
