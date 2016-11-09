@@ -1,0 +1,92 @@
+/* ------------------------------------- 
+		RESETER 
+------------------------------------- */
+
+body, ul,li,h1,h2,h3,h4,h5, small, div,p { 
+	margin:0;
+	padding:0;
+}
+// table {
+// 	// mso-table-lspace: 0; mso-table-rspace: 0;
+// }
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 {
+font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+td,p,a, button, .btn, {
+	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif!important;
+}
+p {
+font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+a { color: $brand-primary; text-decoration: none;}
+
+table,tbody,thead,td,th,tr {
+	border-collapse:collapse;
+  border: 0;
+}
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+
+.btn-wrapper {
+	margin: 20px 0;
+	a {
+		text-decoration:none;
+		border-radius: 2px;
+		color: #FFF;
+		background-color: $brand-primary;
+		padding: 13px 16px;
+		font-weight:bold;
+		// margin-right:10px;
+		// text-align:center;
+		cursor:pointer;
+	}
+}
+
+.no-gap {
+	padding: 0px!important;
+}
+.init { 
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+}
+.colp {
+	border-collapse:collapse!important;
+
+}
+.clearfix {
+	.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+}
+img { 
+	max-width: 100%; 
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}

@@ -13,7 +13,8 @@ var concat = require('gulp-concat');
 var mail = require('gulp-mail');
 var smptInfo = {
 	auth: { 
-		user: 'arisjiratkurniawan@gmail.com',
+		user: 'akfakemailmail@gmail.com',
+		pass : 'AkFakeMailMail1'
 	},
 	host: 'smtp.gmail.com',
 	secureConnection: true,
@@ -87,7 +88,7 @@ gulp.task('mail-min', function () {
 		.pipe(mail({
 			subject: 'Halo, You have notify',
 			to: [
-				'arisjiratkurniawan@gmail.com'
+				'marcio@docotel.com'
 				// 'arisjirat88@yahoo.com',
 				// 'aris@docotel.co.id',
 				// 'arisjirat@icloud.com'
@@ -95,16 +96,16 @@ gulp.task('mail-min', function () {
 			cc: [
 				'arisjirat88@yahoo.com'
 			],
-			from: 'Eproc <arisjiratkurniawan@gmail.com>',
+			from: '<arisjiratkurniawan@gmail.com>',
 			smtp: smptInfo
 		}));
 });
 gulp.task('mail', function () {
-	return gulp.src('./ready-to-fly/new-user/template.html')
+	return gulp.src('./ready-to-fly/notifications/template.html')
 		.pipe(mail({
 			subject: 'Halo',
 			to: [
-				'arisjiratkurniawan@gmail.com'
+				'marcio@docotel.com'
 				// 'arisjirat88@yahoo.com',
 				// 'aris@docotel.co.id',
 				// 'arisjirat@icloud.com'
