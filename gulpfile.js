@@ -71,9 +71,9 @@ gulp.task('html-min', function () {
 gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 	browserSync({
 		injectChanges: true,
-		files: 'shelter/new-user/template.html',
+		files: 'shelter/new-tenders/template.html',
 		server: {
-			baseDir: './shelter/new-user/',
+			baseDir: './shelter/new-tenders/',
 			index: 'template.html'
 		},
 	});
@@ -84,7 +84,7 @@ gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
 
 
 gulp.task('mail-min', function () {
-	return gulp.src('./ready-to-fly-htmlmin/new-user/template.html')
+	return gulp.src('./ready-to-fly-htmlmin/new-tenders/template.html')
 		.pipe(mail({
 			subject: 'Halo, You have notify',
 			to: [
