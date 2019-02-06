@@ -1,121 +1,18 @@
 var gulp = require('gulp');
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var replace = require('gulp-replace');
 var inlineCss = require('gulp-inline-css');
-var hmtlMinify = require('gulp-html-minifier');
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var mergeStream = require('merge-stream');
-var concat = require('gulp-concat');
+/**
+ * run with env
+ * example:
+ * TARGET_DIR=somefolder gulp inline-css
+ */
 
-var mail = require('gulp-mail');
-var smptInfo = {
-	auth: { 
-		user: 'akfakemailmail@gmail.com',
-		pass : 'AkFakeMailMail1'
-	},
-	host: 'smtp.gmail.com',
-	secureConnection: true,
-	port: 465
-};
+gulp.task('inline-css', () => {
+	const dir = `../templates/${process.env.TARGET_DIR}`
+	const source = `${dir}/index.html`
+	const destinations = `${dir}/tomail`
 
-var email_subject = 'Notification Eproc';
-var remote_imgs_basepath = 'http://pasmandor.com/img/cs/';
-
-// Pug Task Compile HTML to shelter folder
-gulp.task('pug', function () {
-	var pugCompile = gulp.src('src/**/*.pug')
-		.pipe(pug({
-			pretty: true
-		}))
-		.pipe(gulp.dest('shelter'));
-
-	return pugCompile;
-});
-
-// Sass Task
-gulp.task('sass', function () {
-	var sassCompile = gulp.src('src/**/*.scss')
-		.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-		.pipe(gulp.dest('shelter'));
-	return sassCompile;
-});
-
-gulp.task('sass-watch', ['sass'], reload);
-
-gulp.task('pug-watch', ['pug'], function () {
-	browserSync.reload();
-            console.log('== Restarted! ==');
-});
-
-gulp.task('html-watch', function () {
-	browserSync.reload();
-            console.log('== Restarted! ==');
-});
-
-gulp.task('inline-css', function () {
-	return gulp.src('shelter/**/*.html')
+ 	return gulp.src(source)
 		.pipe(inlineCss())
-		.pipe(gulp.dest('ready-to-fly/'));
+		.pipe(gulp.dest(destinations));
 });
-
-gulp.task('html-min', function () {
-	return gulp.src('ready-to-fly/**/*.html')
-		.pipe(hmtlMinify({collapseWhitespace: true}))
-		.pipe(gulp.dest('ready-to-fly-htmlmin/'));
-});
-
-
-gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
-	browserSync({
-		injectChanges: true,
-		files: 'shelter/new-tenders/template.html',
-		server: {
-			baseDir: './shelter/new-tenders/',
-			index: 'template.html'
-		},
-	});
-	gulp.watch('src/**/*.pug', ['pug-watch']);
-	gulp.watch('src/**/*.scss', ['sass-watch']);
-	gulp.watch('shelter/**/*.html', ['html-watch']);
-});
-
-
-gulp.task('mail-min', function () {
-	return gulp.src('./ready-to-fly-htmlmin/new-tenders/template.html')
-		.pipe(mail({
-			subject: 'Halo, You have notify',
-			to: [
-				'marcio@docotel.com'
-				// 'arisjirat88@yahoo.com',
-				// 'aris@docotel.co.id',
-				// 'arisjirat@icloud.com'
-			],
-			cc: [
-				'arisjirat88@yahoo.com'
-			],
-			from: '<arisjiratkurniawan@gmail.com>',
-			smtp: smptInfo
-		}));
-});
-gulp.task('mail', function () {
-	return gulp.src('./ready-to-fly/notifications/template.html')
-		.pipe(mail({
-			subject: 'Halo',
-			to: [
-				'marcio@docotel.com'
-				// 'arisjirat88@yahoo.com',
-				// 'aris@docotel.co.id',
-				// 'arisjirat@icloud.com'
-			],
-			cc: [
-				'arisjirat88@yahoo.com'
-			],
-			from: 'Foo <arisjiratkurniawan@gmail.com>',
-			smtp: smptInfo
-		}));
-});
-
-
