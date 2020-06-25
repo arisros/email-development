@@ -1,15 +1,16 @@
+@import './settings.scss';
+
 .wrapper-body {
-	// background: $gray-base;
-	background: $white;
-	padding: 0 10px;
+	background: rgb(249,250,252);
+	padding: 10px 10px;
 }
 .wrapper {
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 590px;
 	min-height: 40px;
+	color: $text;
 }
 .header {
-	// background: $brand-primary;
 	color: $brand-primary;
 	p {
 		padding: 5px 20px ;
@@ -23,11 +24,21 @@
 		text-align: right;
 	}
 }
+.email-content {
+	h2 {
+		color: $text;
+		font-size: 22px;
+		margin: 0;
+	}
+	h3 {
+		font-size: 20px;
+		margin: 0;
+	}
+}
 .banner {
-	color: $brand-primary;
-	border-top: 1px solid $gray-base;
-	border-left: 1px solid $gray-base;
-	border-right: 1px solid $gray-base;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: $white;
 	text-align: center;
 	min-height: 200px;
 	padding: 20px 20px 200px 20px;
@@ -137,8 +148,6 @@
 	border-bottom: 1px solid $gray-base;
 }
 
-
-
 @media only screen and (max-width:480px){
 	/* styles for mobile browsers smaller than 480px; (iPhone) */ 
  	.flex-5,.flex-10,.flex-20,.flex-30,.flex-33,.flex-40,.flex-50,.flex-60,.flex-70,.flex-80,.flex-90 {
@@ -182,20 +191,15 @@
 
 .footer {
 	background: $white;
-	color: $text;
+	color: $text-lighten;
 	td {
 		text-align: center;
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
 .big-text {
 	font-size: 16px!important;
-	color: $text-darker;
-}
-
-.value-text {
-	color: $text-darker;
 }
 
 // Circle
@@ -240,38 +244,15 @@
 	line-height: 28px;
 }
 
-.l-key { 
-	p,span {
-		color: $brand-primary!important;
-	}
-}
-.value-text {
-	color: $brand-primary;
-}
-.job-title {
-	font-size: 16px;
-	a {
-		color: darken($text-darker, 10%);
-	}
-}
-.job-description {
-	color: darken($gray-base, 30%);
-}
-.job-counter {
-	font-size: 14px;
-	.new-tenders {
-		color: $orange;
-	}
-	.tenders-you-can {
-		color: $green;
-	}
-}
 // Margin
 .gap-w-5 {
 	width:5px; line-height:5px; font-size:5px;
 }
 .gap-w-10 {
 	width:10px; line-height:10px; font-size:13px;
+}
+.gap-w-15 {
+	width:15px; line-height:15px; font-size:15px;
 }
 .gap-5 {
 	height:5px; line-height:5px; font-size:5px;
@@ -323,27 +304,51 @@
 
 
 .wrapper-footer {
-	background: $white;
 	color: $text;
 	font-size: 14px;
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 590px;
 	min-height: 35px;
 	img {
 		width: 100px;
 	}
-	a {
-		// background: $orange;
-		color: $text-darker;
-		line-height: 30px;
-	}
 	.link-footer {
-		font-size: 13px;
 		text-align: center;
-		// background: $green;
+		color: $text-lighten;
 	}
+	
 	.copy {
 		text-align: center;
 		font-size: 12px;
+		color: $text-lighten;
 	}
+}
+
+.link {
+	font-size: 14px;
+}
+
+.underline-link {
+	text-decoration: underline;
+}
+
+.primary-link {
+	color: $brand-primary;
+}
+
+.table-content {
+	th, td {
+		font-size: 20px;
+		text-align: left;
+	}
+	th {
+		font-weight: 300;
+	}
+	td {
+		font-weight: 600;
+	}
+}
+.wrap-table-content {
+	width: 100%;
+	padding: 0 30px;
 }

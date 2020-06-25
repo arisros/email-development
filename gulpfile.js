@@ -54,14 +54,14 @@ gulp.task('html-temp-watch', reload);
 gulp.task('development', ['html', 'sass', 'inline-css'], () => {
 	browserSync(configBrowserSync);
 	gulp.watch('src/**/*.html', ['html-watch']);
-	gulp.watch('src/**/*.scss', ['sass-watch']);
+	gulp.watch('src/**/*.scss', ['html-watch']);
 	gulp.watch(`${DIR_PATH.temp}/**/*.html`, ['html-temp-watch', 'inline-css']);
 });
 
 gulp.task('development-pug', ['pug', 'sass', 'inline-css'], () => {
 	browserSync(configBrowserSync);
 	gulp.watch('src/**/*.pug', ['pug-watch']);
-	gulp.watch('src/**/*.scss', ['sass-watch']);
+	gulp.watch('src/**/*.scss', ['html-watch']);
 	gulp.watch(`${DIR_PATH.temp}/**/*.html`, ['html-temp-watch', 'inline-css']);
 });
 
