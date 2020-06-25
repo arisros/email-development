@@ -1,3 +1,5 @@
+@import './settings.scss';
+
 /* ------------------------------------- 
 		RESETER 
 ------------------------------------- */
@@ -15,22 +17,22 @@ body, ul,li,h1,h2,h3,h4,h5, small, div,p {
 ------------------------------------- */
 
 h1,h2,h3,h4,h5,h6 {
-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1;
 }
-td,p,a, button, .btn {
+td, a, button, .btn {
 	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif!important;
 }
 p {
-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
 }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: $text; line-height: 0; text-transform: none; }
 
-h1 { font-weight:200; font-size: 44px;}
-h2 { font-weight:200; font-size: 37px;}
-h3 { font-weight:500; font-size: 27px;}
-h4 { font-weight:500; font-size: 23px;}
+h1 { font-weight:600; font-size: 44px;}
+h2 { font-weight:700; font-size: 37px;}
+h3 { font-weight:600; font-size: 27px;}
+h4 { font-weight:600; font-size: 23px;}
 h5 { font-weight:900; font-size: 17px;}
-h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color: $text;}
 
 a { color: $brand-primary; text-decoration: none;}
 
@@ -46,13 +48,12 @@ table,tbody,thead,td,th,tr {
 	margin: 20px 0;
 	a {
 		text-decoration:none;
-		border-radius: 2px;
+		border-radius: 5px;
 		color: #FFF;
-		background-color: $brand-primary;
-		padding: 13px 16px;
-		font-weight:bold;
-		// margin-right:10px;
-		// text-align:center;
+		background-color: lighten($red, 7);
+		background-image: linear-gradient(180deg, lighten($red, 10) 0.13%, $red 100%);
+		padding: 10px 16px;
+		font-weight: bold;
 		cursor:pointer;
 	}
 }
