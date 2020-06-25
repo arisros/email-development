@@ -1,121 +1,91 @@
-var gulp = require('gulp');
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var replace = require('gulp-replace');
-var inlineCss = require('gulp-inline-css');
-var hmtlMinify = require('gulp-html-minifier');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const prompt = require('gulp-prompt');
+const browserSync = require('browser-sync');
+const fs = require('fs');
+const env = require('gulp-env');
+const pug = require('gulp-pug');
+const htmlMinify = require('gulp-html-minifier');
+const inlineStyle = require('gulp-inline-css');
+const mail = require('gulp-mail');
+const reload = browserSync.reload;
+const { promisify } = require('util');
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var mergeStream = require('merge-stream');
-var concat = require('gulp-concat');
+const to = require('./config/mail');
+const configBrowserSync = require('./config/browsersync');
+const { DIR_DEVELOPMENT, DIR_PATH } = require('./config/constants');
 
-var mail = require('gulp-mail');
-var smptInfo = {
-	auth: { 
-		user: 'akfakemailmail@gmail.com',
-		pass : 'AkFakeMailMail1'
-	},
-	host: 'smtp.gmail.com',
-	secureConnection: true,
-	port: 465
-};
-
-var email_subject = 'Notification Eproc';
-var remote_imgs_basepath = 'http://pasmandor.com/img/cs/';
-
-// Pug Task Compile HTML to shelter folder
-gulp.task('pug', function () {
-	var pugCompile = gulp.src('src/**/*.pug')
-		.pipe(pug({
-			pretty: true
-		}))
-		.pipe(gulp.dest('shelter'));
-
+gulp.task('pug', () => {
+	const pugCompile = gulp.src('src/**/*.pug')
+		.pipe(pug({ pretty: true }))
+		.pipe(gulp.dest(DIR_PATH.temp));
 	return pugCompile;
 });
 
-// Sass Task
-gulp.task('sass', function () {
-	var sassCompile = gulp.src('src/**/*.scss')
-		.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-		.pipe(gulp.dest('shelter'));
+gulp.task('html', () => {
+	const htmlCompile = gulp.src('src/**/*.html')
+		.pipe(gulp.dest(`${DIR_PATH.temp}/`));
+	return htmlCompile;
+});
+
+gulp.task('temp-html-min', () => {
+	return gulp.src(`${DIR_PATH.temp}/**/*.html`)
+		.pipe(htmlMinify({collapseWhitespace: true}))
+		.pipe(gulp.dest(`${DIR_PATH.production}/`));
+});
+
+gulp.task('sass', () => {
+	const sassCompile = gulp.src('src/**/*.scss')
+		.pipe(sass({ outputStyle:'expanded' }).on('error', sass.logError))
+		.pipe(gulp.dest(DIR_PATH.temp));
 	return sassCompile;
 });
 
-gulp.task('sass-watch', ['sass'], reload);
-
-gulp.task('pug-watch', ['pug'], function () {
-	browserSync.reload();
-            console.log('== Restarted! ==');
+gulp.task('inline-css', () => {
+	return gulp.src(`${DIR_PATH.temp}/**/*.html`)
+		.pipe(inlineStyle())
+		.pipe(gulp.dest(DIR_PATH.release));
 });
 
-gulp.task('html-watch', function () {
-	browserSync.reload();
-            console.log('== Restarted! ==');
+gulp.task('pug-watch', ['sass', 'pug'], reload);
+gulp.task('html-watch', ['sass', 'html'], reload);
+gulp.task('html-temp-watch', reload);
+
+gulp.task('development', ['html', 'sass', 'inline-css'], () => {
+	browserSync(configBrowserSync);
+	gulp.watch('src/**/*.html', ['html-watch']);
+	gulp.watch('src/**/*.scss', ['sass-watch']);
+	gulp.watch(`${DIR_PATH.temp}/**/*.html`, ['html-temp-watch', 'inline-css']);
 });
 
-gulp.task('inline-css', function () {
-	return gulp.src('shelter/**/*.html')
-		.pipe(inlineCss())
-		.pipe(gulp.dest('ready-to-fly/'));
-});
-
-gulp.task('html-min', function () {
-	return gulp.src('ready-to-fly/**/*.html')
-		.pipe(hmtlMinify({collapseWhitespace: true}))
-		.pipe(gulp.dest('ready-to-fly-htmlmin/'));
-});
-
-
-gulp.task('development', ['pug', 'sass', 'inline-css'], function () {
-	browserSync({
-		injectChanges: true,
-		files: 'shelter/new-tenders/template.html',
-		server: {
-			baseDir: './shelter/new-tenders/',
-			index: 'template.html'
-		},
-	});
+gulp.task('development-pug', ['pug', 'sass', 'inline-css'], () => {
+	browserSync(configBrowserSync);
 	gulp.watch('src/**/*.pug', ['pug-watch']);
 	gulp.watch('src/**/*.scss', ['sass-watch']);
-	gulp.watch('shelter/**/*.html', ['html-watch']);
+	gulp.watch(`${DIR_PATH.temp}/**/*.html`, ['html-temp-watch', 'inline-css']);
 });
 
-
-gulp.task('mail-min', function () {
-	return gulp.src('./ready-to-fly-htmlmin/new-tenders/template.html')
-		.pipe(mail({
-			subject: 'Halo, You have notify',
-			to: [
-				'marcio@docotel.com'
-				// 'arisjirat88@yahoo.com',
-				// 'aris@docotel.co.id',
-				// 'arisjirat@icloud.com'
-			],
-			cc: [
-				'arisjirat88@yahoo.com'
-			],
-			from: '<arisjiratkurniawan@gmail.com>',
-			smtp: smptInfo
-		}));
+// test send email
+gulp.task('mail-min', () => {
+	return gulp.src(`./${DIR_PATH.production}/${DIR_DEVELOPMENT}/template.html`)
+		.pipe(mail(to));
 });
-gulp.task('mail', function () {
-	return gulp.src('./ready-to-fly/notifications/template.html')
-		.pipe(mail({
-			subject: 'Halo',
-			to: [
-				'marcio@docotel.com'
-				// 'arisjirat88@yahoo.com',
-				// 'aris@docotel.co.id',
-				// 'arisjirat@icloud.com'
-			],
-			cc: [
-				'arisjirat88@yahoo.com'
-			],
-			from: 'Foo <arisjiratkurniawan@gmail.com>',
-			smtp: smptInfo
-		}));
+
+function sendEmail(project) {
+	if (!project) {
+		console.log('no projects choosed')
+		return;
+	}
+
+	return gulp.src(`./${DIR_PATH.release}/${project}/template.html`)
+		.pipe(mail(to));
+
+}
+
+gulp.task('mail', async () => {
+	console.log(to)
+	return gulp.src(`./${DIR_PATH.release}/${DIR_DEVELOPMENT}/template.html`)
+	.pipe(mail(to));
 });
 
 
