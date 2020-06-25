@@ -70,20 +70,7 @@ gulp.task('mail-min', () => {
 	return gulp.src(`./${DIR_PATH.production}/${DIR_DEVELOPMENT}/template.html`)
 		.pipe(mail(to));
 });
-
-function sendEmail(project) {
-	if (!project) {
-		console.log('no projects choosed')
-		return;
-	}
-
-	return gulp.src(`./${DIR_PATH.release}/${project}/template.html`)
-		.pipe(mail(to));
-
-}
-
 gulp.task('mail', async () => {
-	console.log(to)
 	return gulp.src(`./${DIR_PATH.release}/${DIR_DEVELOPMENT}/template.html`)
 	.pipe(mail(to));
 });
