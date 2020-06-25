@@ -43,7 +43,7 @@ gulp.task('sass', () => {
 
 gulp.task('inline-css', () => {
 	return gulp.src(`${DIR_PATH.temp}/**/*.html`)
-		.pipe(inlineStyle())
+		.pipe(inlineStyle({ removeHtmlSelectors: true }))
 		.pipe(gulp.dest(DIR_PATH.release));
 });
 
