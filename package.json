@@ -4,7 +4,9 @@
   "description": "Create Email Notifications Eproc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-html": "",
+    "start-pug": ""
   },
   "author": "",
   "license": "ISC",
@@ -14,11 +16,13 @@
     "gulp-concat": "^2.6.0",
     "gulp-email": "0.0.7",
     "gulp-email-builder": "^3.0.0",
+    "gulp-env": "^0.4.0",
     "gulp-html-minifier": "^0.1.8",
     "gulp-image": "^2.6.0",
     "gulp-inline-css": "^3.1.0",
     "gulp-mail": "^0.1.1",
     "gulp-notify": "^2.2.0",
+    "gulp-prompt": "^1.2.0",
     "gulp-pug": "^3.1.0",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
